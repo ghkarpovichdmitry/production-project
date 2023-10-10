@@ -5,4 +5,6 @@ const AboutPageAsync = lazy(() => new Promise(resolve => {
     setTimeout(() => resolve(import("./AboutPage")), 1500)
 }));
 
-export {AboutPageAsync};
+export {
+    AboutPageAsync
+};

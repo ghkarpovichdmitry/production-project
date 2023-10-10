@@ -4,6 +4,16 @@ import {BuildOptions} from "./types/config";
 
 export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    };
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        use: [{ loader: 'file-loader', }],
+    };
+
     // If we don't use TS we need to add Babel-loader
     const tsLoader = { // need to keep in variables because order does matter here
         test: /\.tsx?$/,
@@ -41,6 +51,8 @@ export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule
     return [
         tsLoader,
         stylesLoader,
+        svgLoader,
+        fileLoader,
         miniCssExtractPlugin
     ]
 }

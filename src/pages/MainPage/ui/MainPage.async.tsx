@@ -5,4 +5,6 @@ const MainPageAsync = lazy(() => new Promise(resolve => {
     setTimeout(() => resolve(import("./MainPage")), 1500)
 }));
 
-export {MainPageAsync};
+export {
+    MainPageAsync
+};
