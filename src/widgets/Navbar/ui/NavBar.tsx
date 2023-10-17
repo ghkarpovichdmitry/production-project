@@ -15,14 +15,14 @@ export const NavBar = ({ className }: NavBarProps): ReactElement => {
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
                 <AppLink
-                    to={'/'}
+                    to="/"
                     className={cls.mainLink}
                     theme={AppLinkTheme.SECONDARY}
                 >
                     {t('Main page')}
                 </AppLink>
                 <AppLink
-                    to={'/about'}
+                    to="/about"
                     theme={AppLinkTheme.SECONDARY}
                 >
                     {t('About us')}
