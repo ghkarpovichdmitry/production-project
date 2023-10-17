@@ -1,14 +1,15 @@
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from "./NavBar.module.scss";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {useTranslation} from "react-i18next";
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './NavBar.module.scss';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
+import { type ReactElement } from 'react';
 
 interface NavBarProps {
-    className?: string;
+    className?: string
 }
 
-export const NavBar = ({className}: NavBarProps) => {
-    const {t} = useTranslation();
+export const NavBar = ({ className }: NavBarProps): ReactElement => {
+    const { t } = useTranslation();
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>

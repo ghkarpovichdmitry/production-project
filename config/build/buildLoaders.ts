@@ -1,29 +1,28 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/config";
+import type webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { type BuildOptions } from './types/config';
 
-export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
-
+export default function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack']
     };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-        use: [{ loader: 'file-loader', }],
+        use: [{ loader: 'file-loader' }]
     };
 
     // If we don't use TS we need to add Babel-loader
     const tsLoader = { // need to keep in variables because order does matter here
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
     };
 
     const miniCssExtractPlugin = {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
     };
 
     const stylesLoader = {
@@ -33,19 +32,19 @@ export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // Translates CSS into CommonJS
             {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                     modules: {
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:8]'
-                            : '[hash:base64:8]',
-                    },
+                            : '[hash:base64:8]'
+                    }
                 }
             },
             // Compiles Sass to CSS
-            "sass-loader",
-        ],
+            'sass-loader'
+        ]
     };
 
     // const refreshPlugin = { // TODO fix later
@@ -68,8 +67,8 @@ export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule
             loader: 'babel-loader',
             options: {
                 presets: [
-                    ['@babel/preset-env', { targets: "defaults" }]
-                ],
+                    ['@babel/preset-env', { targets: 'defaults' }]
+                ]
             }
         }
     };
@@ -81,6 +80,6 @@ export default function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule
         babelLoader,
         tsLoader,
         // refreshPlugin,
-        miniCssExtractPlugin,
-    ]
+        miniCssExtractPlugin
+    ];
 }
