@@ -4,7 +4,8 @@ import { type BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 // const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-export default function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export default function buildPlugins (
+    { paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     // const addRefreshPlugin = (): any => {
     //     return isDev ? [new ReactRefreshWebpackPlugin()].filter(Boolean) : null
     // };
