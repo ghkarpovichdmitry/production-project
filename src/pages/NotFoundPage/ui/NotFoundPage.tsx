@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NotFoundPage.module.scss';
 import { type ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
-import { PageLoader } from 'widgets/PageLoader';
 
 interface NotFoundPageProps {
     className?: string
