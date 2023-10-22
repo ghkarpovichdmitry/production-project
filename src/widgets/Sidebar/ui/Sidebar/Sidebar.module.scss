@@ -4,6 +4,7 @@
     background-color: var(--inverted-bg-color);
     position: relative;
     transition: width 0.5s;
+    text-align: center;
 }
 
 .collapsed {
@@ -21,4 +22,10 @@
 
 .lang {
     margin: 10px auto;
+}
+
+.throwErrorBtn {
+    margin: 20px auto;
+    padding: 0;
+    font-size: var(--font-size-s);
 }

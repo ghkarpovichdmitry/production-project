@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 
+interface BugButtonProps {
+    className: string
+}
+
 // => Component for errors testing
-export const BugButton = (): any => {
+export const BugButton = (props: BugButtonProps): any => {
     const [pageError, setPageError] = useState(false);
 
     const runError = (): void => { setPageError(true); };
@@ -13,8 +17,8 @@ export const BugButton = (): any => {
     }, [pageError]);
 
     return (
-        <div onClick={runError}>
+        <button onClick={runError} className={props.className}>
             {'throw Error'}
-        </div>
+        </button>
     );
 };

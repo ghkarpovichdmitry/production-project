@@ -14,7 +14,8 @@ describe('classNames', () => {
         expect(classNames(
             'testX',
             {},
-            ['cls1', 'cls2']))
+            ['cls1', 'cls2']
+        ))
             .toBe(expected);
     });
 
@@ -23,7 +24,8 @@ describe('classNames', () => {
         expect(classNames(
             'testX',
             { hovered: true, scrollable: true },
-            ['cls1']))
+            ['cls1']
+        ))
             .toBe(expected);
     });
 
@@ -32,7 +34,8 @@ describe('classNames', () => {
         expect(classNames(
             'testX',
             { hovered: true, scrollable: false },
-            ['cls1']))
+            ['cls1']
+        ))
             .toBe(expected);
     });
 
@@ -41,7 +44,8 @@ describe('classNames', () => {
         expect(classNames(
             'testX',
             { hovered: true, scrollable: undefined },
-            ['cls1']))
+            ['cls1']
+        ))
             .toBe(expected);
     });
 });

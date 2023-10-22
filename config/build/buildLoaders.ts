@@ -47,19 +47,6 @@ export default function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetR
         ]
     };
 
-    // const refreshPlugin = { // TODO fix later
-    //     test: /\.[jt]sx?$/,
-    //     exclude: /node_modules/,
-    //     use: [
-    //         {
-    //             loader: require.resolve('babel-loader'),
-    //             options: {
-    //                 plugins: [isDev && require.resolve('react-refresh/babel')].filter(Boolean),
-    //             },
-    //         },
-    //     ],
-    // };
-
     const babelLoader = {
         test: /\.(?:js|mjs|cjs|tsx|jsx)$/,
         exclude: /node_modules/,
@@ -79,7 +66,6 @@ export default function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetR
         fileLoader,
         babelLoader,
         tsLoader,
-        // refreshPlugin,
         miniCssExtractPlugin
     ];
 }
