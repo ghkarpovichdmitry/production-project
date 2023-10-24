@@ -3,11 +3,7 @@ module.exports = {
         browser: true,
         es2021: true
     },
-    extends: [
-        'plugin:react/recommended',
-        'standard-with-typescript',
-        'plugin:i18next/recommended'
-    ],
+    extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     overrides: [
         {
             files: ['**/src/**/*.test.{tsx,ts}'],
@@ -26,7 +22,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
     ],
     rules: {
         indent: [2, 4],
@@ -43,8 +39,12 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAllAttributes: true }
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to']
+            }
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }]
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        '@typescript-eslint/prefer-includes': 'off'
     }
 };

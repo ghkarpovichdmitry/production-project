@@ -8,11 +8,11 @@ interface NavBarProps {
     className?: string
 }
 
-export const NavBar = ({ className }: NavBarProps): ReactElement => {
+export const Navbar = ({ className }: NavBarProps): ReactElement => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.navbar, {}, [className])}>
+        <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
                 <AppLink
                     to="/"

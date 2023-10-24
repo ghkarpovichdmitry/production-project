@@ -32,3 +32,15 @@ select {
     flex-grow: 1;
     padding: 20px;
 }
+
+.min-height-auto {
+    min-height: auto;
+}
+
+.no-background {
+    background: none;
+}
+
+#storybook-root {
+    width: 100%;
+}
