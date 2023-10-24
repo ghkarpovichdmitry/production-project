@@ -27,7 +27,6 @@
     "**/*.tsx",
     "./src",
     "./config",
-    "./config/build/loaders",
     "./.eslintrc.js",
     "./webpack.config.ts"
   ],
