@@ -23,9 +23,11 @@
     "./config/jest/jest-setup.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
+    "**/*.ts",
+    "**/*.tsx",
     "./src",
     "./config",
     "./.eslintrc.js",
-    "webpack.config.ts"
+    "./webpack.config.ts"
   ],
 }

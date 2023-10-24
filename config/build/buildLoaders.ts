@@ -1,5 +1,4 @@
 import type webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { type BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
 
@@ -21,11 +20,6 @@ export default function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetR
         exclude: /node_modules/
     };
 
-    const miniCssExtractPlugin = {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-    };
-
     const stylesLoader = buildCssLoaders(isDev);
 
     const babelLoader = {
@@ -42,11 +36,10 @@ export default function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetR
     };
 
     return [
-        stylesLoader,
-        svgLoader,
         fileLoader,
+        svgLoader,
         babelLoader,
         tsLoader,
-        miniCssExtractPlugin
+        stylesLoader
     ];
 }
