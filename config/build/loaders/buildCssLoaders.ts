@@ -18,7 +18,7 @@ export function buildCssLoaders (isDev: boolean): any {
                     }
                 }
             },
-            // * Compiles Sass to CSS
+            // * * Compiles Sass to CSS
             'sass-loader'
         ]
     };
