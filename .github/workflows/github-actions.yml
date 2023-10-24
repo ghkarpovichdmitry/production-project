@@ -23,10 +23,10 @@ jobs:
       - name: install modules
         run: npm install
       - name: build production project
-        run: npm rin build prod
+        run: npm run build prod
       - name: linting typescript
-        run: npm rin lint:ts
+        run: npm run lint:ts
       - name: linting css
-        run: npm rin lint:scss
+        run: npm run lint:scss
       - name: unit testing
-        run: npm rin test:unit
+        run: npm run test:unit
