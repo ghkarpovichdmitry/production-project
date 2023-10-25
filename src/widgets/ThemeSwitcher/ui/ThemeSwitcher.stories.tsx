@@ -8,8 +8,7 @@ const meta = {
     component: ThemeSwitcher,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof ThemeSwitcher>;
 
 export default meta;

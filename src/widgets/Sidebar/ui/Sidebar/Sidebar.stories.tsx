@@ -8,8 +8,7 @@ const meta = {
     component: Sidebar,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

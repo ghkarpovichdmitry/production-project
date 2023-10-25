@@ -11,8 +11,7 @@ const meta = {
     },
     args: {
         to: '/'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof AppLink>;
 
 export default meta;

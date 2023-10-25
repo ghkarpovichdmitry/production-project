@@ -8,8 +8,7 @@ const meta = {
     component: NotFoundPage,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof NotFoundPage>;
 
 export default meta;

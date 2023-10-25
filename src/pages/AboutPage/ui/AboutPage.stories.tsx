@@ -8,8 +8,7 @@ const meta = {
     component: AboutPage,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof AboutPage>;
 
 export default meta;

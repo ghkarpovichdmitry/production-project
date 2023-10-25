@@ -8,8 +8,7 @@ const meta = {
     component: PageError,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof PageError>;
 
 export default meta;

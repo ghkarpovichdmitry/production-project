@@ -8,8 +8,7 @@ const meta = {
     component: Loader,
     parameters: {
         layout: 'centered'
-    },
-    tags: ['autodocs']
+    }
 } satisfies Meta<typeof Loader>;
 
 export default meta;
