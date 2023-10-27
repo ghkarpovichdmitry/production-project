@@ -4,14 +4,19 @@ import { render, type RenderResult } from '@testing-library/react';
 import i18nForTests from 'shared/config/i18n/i18nForTests';
 import { MemoryRouter } from 'react-router-dom';
 
-export const renderTestComponent = (component: ReactNode): RenderResult => {
-    return render(
-        <MemoryRouter>
-            <I18nextProvider i18n={i18nForTests}>
-                {component}
-            </I18nextProvider>
-        </MemoryRouter>
-    );
-};
+export interface componentRenderOptions {
+    route?: string
+}
 
-export default renderTestComponent;
+export const renderTestComponent =
+    (component: ReactNode, options: componentRenderOptions = {}): RenderResult => {
+        const { route = '/' } = options;
+
+        return render(
+            <MemoryRouter initialEntries={[route]}>
+                <I18nextProvider i18n={i18nForTests}>
+                    {component}
+                </I18nextProvider>
+            </MemoryRouter>
+        );
+    };
