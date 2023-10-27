@@ -1,18 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react';
-import {
-    renderWithTranslation
-} from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 import { Sidebar } from './Sidebar';
+import renderTestComponent from 'shared/lib/tests/renderTestComponent/renderTestComponent';
 
 describe('Sidebar test', () => {
     test('Sidebar className test', () => {
-        renderWithTranslation(<Sidebar />);
+        renderTestComponent(<Sidebar />);
 
         expect(screen.getByTestId('sidebar')).toHaveClass('Sidebar');
     });
 
     test('Sidebar test toggle', () => {
-        renderWithTranslation(<Sidebar />);
+        renderTestComponent(<Sidebar />);
 
         const sidebar = screen.getByTestId('sidebar');
         const toggleBtn = screen.getByTestId('sidebar-toggle');

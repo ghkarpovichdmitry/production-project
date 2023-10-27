@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton, TypeButton } from './Button';
+import { Button, ButtonTheme, ButtonType } from './Button';
 
 describe('Button tests', () => {
     test('Button with text', () => {
@@ -10,14 +10,14 @@ describe('Button tests', () => {
     });
 
     test('Button with param - theme', () => {
-        const { container } = render(<Button theme={ThemeButton.CLEAR} />);
+        const { container } = render(<Button theme={ButtonTheme.CLEAR} />);
 
         expect(container.firstChild).toHaveClass('clear');
     });
 
     test('Button with children', () => {
         const { container } =
-            render(<Button theme={ThemeButton.CLEAR}><i className="children-icon" /></Button>);
+            render(<Button theme={ButtonTheme.CLEAR}><i className="children-icon" /></Button>);
 
         expect(container.firstChild.firstChild).toHaveClass('children-icon');
     });
@@ -30,8 +30,8 @@ describe('Button tests', () => {
     });
 
     test('Button with custom attribute', () => {
-        const { container } = render(<Button type={TypeButton.RESET} />);
+        const { container } = render(<Button type={ButtonType.RESET} />);
 
-        expect(container.firstChild).toHaveAttribute('type', TypeButton.RESET);
+        expect(container.firstChild).toHaveAttribute('type', ButtonType.RESET);
     });
 });
