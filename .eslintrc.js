@@ -45,8 +45,7 @@ module.exports = {
             }
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        '@typescript-eslint/prefer-includes': 'off',
-        'linebreak-style': 'off'
+        '@typescript-eslint/prefer-includes': 'off'
     },
     settings: {
         react: {
