@@ -22,7 +22,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next',
+        'i18next'
     ],
     rules: {
         indent: [2, 4],
@@ -45,11 +45,12 @@ module.exports = {
             }
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        '@typescript-eslint/prefer-includes': 'off'
+        '@typescript-eslint/prefer-includes': 'off',
+        'linebreak-style': 'off'
     },
-    "settings": {
-        "react": {
-            "version": "detect"
+    settings: {
+        react: {
+            version: 'detect'
         }
     }
 };
