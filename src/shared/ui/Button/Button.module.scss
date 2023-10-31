@@ -4,13 +4,16 @@
     color: var(--primary-color);
 }
 
-.clear {
-    text-decoration: none;
+.clear,
+.clearInverted {
     border: none;
     padding: 0;
-    margin: 0;
     outline: none;
     background: none;
+}
+
+.clearInverted {
+    color: var(--inverted-primary-color);
 }
 
 .outline {

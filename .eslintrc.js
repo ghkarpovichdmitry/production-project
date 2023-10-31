@@ -3,14 +3,11 @@ module.exports = {
         browser: true,
         es2021: true
     },
-    extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
-    overrides: [
-        {
-            files: ['**/src/**/*.test.{tsx,ts}'],
-            rules: {
-                'i18next/no-literal-string': 'off'
-            }
-        }
+    extends: [
+        'plugin:react/recommended',
+        'standard-with-typescript',
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended'
     ],
     globals: {
         _IS_DEV_: true
@@ -22,7 +19,8 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     rules: {
         indent: [2, 4],
@@ -45,11 +43,22 @@ module.exports = {
             }
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        '@typescript-eslint/prefer-includes': 'off'
+        '@typescript-eslint/prefer-includes': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
     },
     settings: {
         react: {
             version: 'detect'
         }
-    }
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{tsx,ts}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off'
+            }
+        }
+    ]
 };
