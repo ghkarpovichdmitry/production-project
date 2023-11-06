@@ -5,7 +5,6 @@ import {
     useState, useRef, useEffect, useCallback
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 
 export interface ModalProps {
     className?: string
@@ -20,12 +19,10 @@ const Modal = (props: ModalProps): ReactElement => {
     const { className, children, isOpen, onClose } = props;
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<number>();
-    const { theme } = useTheme();
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-        [cls[theme]]: true
+        [cls.isClosing]: isClosing
     };
 
     const onContentClick = (e: MouseEvent): any => {
