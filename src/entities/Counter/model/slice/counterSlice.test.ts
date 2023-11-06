@@ -7,7 +7,7 @@ describe('counterSlice test', function () {
             value: 10
         };
 
-        expect(counterReducer(state, counterActions.decrement(state))).toEqual({
+        expect(counterReducer(state, counterActions.decrement())).toEqual({
             value: 9
         });
     });
@@ -17,7 +17,7 @@ describe('counterSlice test', function () {
             value: 10
         };
 
-        expect(counterReducer(state, counterActions.increment(state))).toEqual({
+        expect(counterReducer(state, counterActions.increment())).toEqual({
             value: 11
         });
     });
