@@ -11,5 +11,7 @@
   "Page not found": "Strona nie została znaleziona.",
   "Unexpected error": "Nieoczekiwany błąd",
   "Refresh the page": "Odśwież stronę",
-  "Login": "Logowanie"
+  "Login": "Logowanie",
+  "Increment": "Przyrost",
+  "Decrement": "Zmniejszenie"
 }

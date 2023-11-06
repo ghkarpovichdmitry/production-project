@@ -11,5 +11,7 @@
   "Page not found": "The page was not found.",
   "Unexpected error": "Unexpected error",
   "Refresh the page": "Refresh the page",
-  "Login": "Login"
+  "Login": "Login",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }
