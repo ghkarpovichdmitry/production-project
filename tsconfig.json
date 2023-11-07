@@ -23,6 +23,7 @@
     "./config/jest/jest-setup.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
+    "./json-server/*.js",
     "**/*.ts",
     "**/*.tsx",
     "./src",
