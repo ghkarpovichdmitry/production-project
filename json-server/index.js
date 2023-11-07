@@ -8,12 +8,12 @@ const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
-server.use(router);
 server.use(jsonServer.bodyParser);
 
 // Small delay in order to imitate real api work
 server.use(async (req, res, next) => {
     await new Promise((res) => {
+        console.log('Small delay');
         setTimeout(res, 800);
     });
     next();
