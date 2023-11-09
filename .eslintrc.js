@@ -29,13 +29,12 @@ module.exports = {
         '@typescript-eslint/semi': ['error', 'always'],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', 'tsx'] }],
-        'no-unused-vars': 'error',
         '@typescript-eslint/no-unused-vars': [
             'error',
             {
                 argsIgnorePattern: '^_',
                 varsIgnorePattern: '^_',
-                caughtErrorsIgnorePattern: '^_'
+                destructuredArrayIgnorePattern: '^_'
             }
         ],
         'import/prefer-default-export': 'off',

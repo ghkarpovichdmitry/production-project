@@ -28,7 +28,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         //   in div (created by App)
         //   in App
         // logErrorToMyService(error, info.componentStack);
-        console.log('error message in ErrorBoundary componentDidCatch ', error.message);
+        console.log('error message in ErrorBoundary componentDidCatch ', error.message, info);
     }
 
     render (): any {

@@ -67,3 +67,5 @@ export const Input = memo((props: InputProps): ReactElement => {
         </div>
     );
 });
+
+Input.displayName = 'Input';

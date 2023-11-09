@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { type ReactElement } from 'react';
 
-interface ComponentProps {
-    className?: string
-}
-
-export const Component = ({ className }: ComponentProps): ReactElement => {
+export const Component = (): ReactElement => {
     const { t } = useTranslation();
 
     return (
