@@ -38,7 +38,7 @@ module.exports = {
     ],
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
-    modulePaths: [ // todo doublecheck later
+    modulePaths: [
         '<rootDir>src'
     ],
     // The glob patterns Jest uses to detect test files

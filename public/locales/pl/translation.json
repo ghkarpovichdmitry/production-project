@@ -13,5 +13,7 @@
   "Refresh the page": "Odśwież stronę",
   "Login": "Logowanie",
   "Increment": "Przyrost",
-  "Decrement": "Zmniejszenie"
+  "Decrement": "Zmniejszenie",
+  "Enter username": "Wprowadź nazwę użytkownika",
+  "Enter password": "Wprowadź hasło"
 }

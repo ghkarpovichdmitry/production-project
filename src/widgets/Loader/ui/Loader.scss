@@ -67,6 +67,9 @@
     height: 61px;
     display: inline-block;
     overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
 }
 
 .ldio-71p9c9c4u08 {
@@ -75,5 +78,5 @@
     position: relative;
     transform: translateZ(0) scale(0.61);
     backface-visibility: hidden;
-    transform-origin: 0 0; /* see note above */
+    transform-origin: 0 0;
 }
