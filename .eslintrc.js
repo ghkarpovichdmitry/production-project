@@ -29,7 +29,15 @@ module.exports = {
         '@typescript-eslint/semi': ['error', 'always'],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', 'tsx'] }],
-        'no-unused-vars': [1, { destructuredArrayIgnorePattern: "^_" }],
+        'no-unused-vars': 'error',
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                caughtErrorsIgnorePattern: '^_'
+            }
+        ],
         'import/prefer-default-export': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 0, // maybe I'm wrong here
         '@typescript-eslint/strict-boolean-expressions': 0, // maybe I'm wrong here
