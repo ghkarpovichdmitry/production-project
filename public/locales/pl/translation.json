@@ -15,5 +15,8 @@
   "Increment": "Przyrost",
   "Decrement": "Zmniejszenie",
   "Enter username": "Wprowadź nazwę użytkownika",
-  "Enter password": "Wprowadź hasło"
+  "Enter password": "Wprowadź hasło",
+  "Authorisation form": "Formularz zezwolenia",
+  "You have entered wrong login or password": "Wprowadzono nieprawidłowy login lub hasło",
+  "Logout": "Wylogowanie"
 }
