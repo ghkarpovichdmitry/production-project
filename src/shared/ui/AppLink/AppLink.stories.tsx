@@ -1,18 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta } from '@storybook/blocks';
+import type { StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { AppLink, AppLinkTheme } from './AppLink';
 
-const meta = {
-    title: 'shared/AppLink',
+const meta: Meta<typeof AppLink> = {
     component: AppLink,
+    title: 'shared/AppLink',
     parameters: {
-        layout: 'centered'
+        layout: 'fullscreen'
     },
     args: {
         to: '/'
-    }
-} satisfies Meta<typeof AppLink>;
+    },
+    tags: ['autodocs']
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

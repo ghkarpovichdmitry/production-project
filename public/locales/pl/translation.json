@@ -18,5 +18,6 @@
   "Enter password": "Wprowadź hasło",
   "Authorisation form": "Formularz zezwolenia",
   "You have entered wrong login or password": "Wprowadzono nieprawidłowy login lub hasło",
-  "Logout": "Wylogowanie"
+  "Logout": "Wylogowanie",
+  "Throw error": "throw error pl version"
 }

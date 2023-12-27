@@ -1,15 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta } from '@storybook/blocks';
+import type { StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { PageError } from 'widgets/PageError';
 
-const meta = {
-    title: 'widgets/PageError',
+const meta: Meta<typeof PageError> = {
     component: PageError,
+    title: 'widgets/PageError',
     parameters: {
-        layout: 'centered'
-    }
-} satisfies Meta<typeof PageError>;
+        layout: 'fullscreen'
+    },
+    tags: ['autodocs']
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

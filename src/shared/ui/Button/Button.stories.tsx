@@ -1,15 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta } from '@storybook/blocks';
+import type { StoryObj } from '@storybook/react';
 import { Button, ButtonSize, ButtonTheme, ButtonType } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-const meta = {
-    title: 'shared/Button',
+const meta: Meta<typeof Button> = {
     component: Button,
+    title: 'shared/Button',
     parameters: {
-        layout: 'centered'
-    }
-} satisfies Meta<typeof Button>;
+        layout: 'fullscreen'
+    },
+    tags: ['autodocs']
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -90,6 +92,15 @@ export const OutlineDark: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE
+    },
+    decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const OutlineSizeS: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.S
     },
     decorators: [ThemeDecorator(Theme.DARK)]
 };

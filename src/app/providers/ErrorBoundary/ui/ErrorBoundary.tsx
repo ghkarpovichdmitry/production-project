@@ -21,7 +21,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         return { hasError: true };
     }
 
-    componentDidCatch (error: Error, info: ErrorInfo): void {
+    // componentDidCatch (error: Error, info: ErrorInfo): void {
+    componentDidCatch (error: Error, info: ErrorInfo): any {
         // Example "componentStack":
         //   in ComponentThatThrows (created by App)
         //   in ErrorBoundary (created by App)
@@ -36,7 +37,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         const { children } = this.props;
 
         if (hasError) {
-            return <Suspense fallback={'error from ErrorBoundary'}><PageError/></Suspense>;
+            // return <Suspense fallback={'error from ErrorBoundary'}><PageError/></Suspense>;
+            return (<Suspense fallback={''}>
+                <PageError/>
+            </Suspense>);
         }
 
         return children;

@@ -18,5 +18,6 @@
   "Enter password": "Enter password",
   "Authorisation form": "Authorisation form",
   "You have entered wrong login or password": "You have entered wrong login or password",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Throw error": "throw error"
 }

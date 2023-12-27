@@ -1,15 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta } from '@storybook/blocks';
+import type { StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Loader } from './Loader';
 
-const meta = {
-    title: 'widgets/Loader',
+const meta: Meta<typeof Loader> = {
     component: Loader,
+    title: 'widgets/Loader',
     parameters: {
-        layout: 'centered'
-    }
-} satisfies Meta<typeof Loader>;
+        layout: 'fullscreen'
+    },
+    tags: ['autodocs']
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

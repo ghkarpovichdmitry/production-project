@@ -1,12 +1,15 @@
+import { Button } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface BugButtonProps {
-    className: string
+    className?: string
 }
 
 // => Component for errors testing
 export const BugButton = (props: BugButtonProps): any => {
     const [pageError, setPageError] = useState(false);
+    const { t } = useTranslation();
 
     const runError = (): void => { setPageError(true); };
 
@@ -17,8 +20,8 @@ export const BugButton = (props: BugButtonProps): any => {
     }, [pageError]);
 
     return (
-        <button onClick={runError} className={props.className}>
-            {'throw Error'}
-        </button>
+        <Button onClick={runError} className={props.className}>
+            {t('Throw error')}
+        </Button>
     );
 };
