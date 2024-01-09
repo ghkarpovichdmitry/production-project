@@ -4,14 +4,16 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { LangSwitcher } from './LangSwitcher';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-export default {
+const meta: Meta = {
     component: LangSwitcher,
     title: 'widgets/LangSwitcher',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof LangSwitcher>;
 
 export const Normal: Story = {

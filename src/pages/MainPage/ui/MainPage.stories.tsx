@@ -3,14 +3,16 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
 
-export default {
+const meta: Meta = {
     component: MainPage,
     title: 'pages/MainPage',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof MainPage>;
 
 export const Normal: Story = {

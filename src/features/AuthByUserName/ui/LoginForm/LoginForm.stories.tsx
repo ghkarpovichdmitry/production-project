@@ -4,14 +4,16 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { LoginForm } from './LoginForm';
 
-export default {
+const meta: Meta = {
     component: LoginForm,
     title: 'features/AuthByUserName/LoginForm',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof LoginForm>;
 
 export const Normal: Story = {

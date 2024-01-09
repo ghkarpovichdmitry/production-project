@@ -3,14 +3,16 @@ import { Input } from './Input';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-export default {
+const meta: Meta = {
     component: Input,
     title: 'shared/Input',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof Input>;
 
 export const Empty: Story = {

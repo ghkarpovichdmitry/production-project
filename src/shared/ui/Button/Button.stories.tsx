@@ -3,14 +3,16 @@ import { Button, ButtonSize, ButtonTheme, ButtonType } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-export default {
+const meta: Meta = {
     component: Button,
     title: 'shared/Button',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {

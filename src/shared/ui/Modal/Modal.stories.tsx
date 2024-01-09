@@ -3,7 +3,7 @@ import { Modal } from './Modal';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-export default {
+const meta: Meta = {
     component: Modal,
     title: 'shared/Modal',
     parameters: {
@@ -14,7 +14,9 @@ export default {
         lazy: false
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof Modal>;
 
 export const ModalRegular: Story = {
