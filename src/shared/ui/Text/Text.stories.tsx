@@ -3,7 +3,7 @@ import { Text, TextTheme } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-export default {
+const meta: Meta = {
     component: Text,
     title: 'shared/Text',
     parameters: {
@@ -14,7 +14,9 @@ export default {
         theme: TextTheme.PRIMARY
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const PrimaryText: Story = {
