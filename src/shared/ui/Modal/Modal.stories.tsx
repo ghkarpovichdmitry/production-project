@@ -1,10 +1,9 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Modal } from './Modal';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-const meta: Meta<typeof Modal> = {
+export default {
     component: Modal,
     title: 'shared/Modal',
     parameters: {
@@ -15,10 +14,8 @@ const meta: Meta<typeof Modal> = {
         lazy: false
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof Modal>;
 
 export const ModalRegular: Story = {
     args: {

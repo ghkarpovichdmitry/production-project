@@ -1,20 +1,17 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { NotFoundPage } from './NotFoundPage';
 
-const meta: Meta<typeof NotFoundPage> = {
+export default {
     component: NotFoundPage,
     title: 'pages/NotFoundPage',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof NotFoundPage>;
 
 export const Normal: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]

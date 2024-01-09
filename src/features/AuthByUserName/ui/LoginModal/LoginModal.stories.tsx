@@ -1,21 +1,18 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { LoginModal } from './LoginModal';
 
-const meta: Meta<typeof LoginModal> = {
+export default {
     component: LoginModal,
     title: 'Features/AuthByUserName/LoginModal',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof LoginModal>;
 
 export const NormalOpen: Story = {
     args: {

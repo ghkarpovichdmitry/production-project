@@ -1,20 +1,17 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from './Input';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-const meta: Meta<typeof Input> = {
+export default {
     component: Input,
     title: 'shared/Input',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof Input>;
 
 export const Empty: Story = {
     args: {

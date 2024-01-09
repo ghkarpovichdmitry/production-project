@@ -1,21 +1,18 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Sidebar } from 'widgets/Sidebar';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-const meta: Meta<typeof Sidebar> = {
+export default {
     component: Sidebar,
     title: 'widgets/Sidebar',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof Sidebar>;
 
 export const Light: Story = {
     decorators: [

@@ -1,20 +1,17 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Button, ButtonSize, ButtonTheme, ButtonType } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-const meta: Meta<typeof Button> = {
+export default {
     component: Button,
     title: 'shared/Button',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
     args: {

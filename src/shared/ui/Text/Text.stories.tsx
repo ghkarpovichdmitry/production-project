@@ -1,10 +1,9 @@
-import { type Meta } from '@storybook/blocks';
-import type { StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Text, TextTheme } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-const meta: Meta<typeof Text> = {
+export default {
     component: Text,
     title: 'shared/Text',
     parameters: {
@@ -15,10 +14,8 @@ const meta: Meta<typeof Text> = {
         theme: TextTheme.PRIMARY
     },
     tags: ['autodocs']
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta;
+type Story = StoryObj<typeof Text>;
 
 export const PrimaryText: Story = {
     args: {
