@@ -3,14 +3,16 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { PageError } from 'widgets/PageError';
 
-export default {
+const meta: Meta = {
     component: PageError,
     title: 'widgets/PageError',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof PageError>;
 
 export const Light: Story = {

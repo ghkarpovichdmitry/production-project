@@ -4,14 +4,16 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Sidebar } from 'widgets/Sidebar';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-export default {
+const meta: Meta = {
     component: Sidebar,
     title: 'widgets/Sidebar',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} as Meta;
+};
+
+export default meta;
 type Story = StoryObj<typeof Sidebar>;
 
 export const Light: Story = {
