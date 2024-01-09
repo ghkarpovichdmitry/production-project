@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { type Meta } from '@storybook/blocks';
 import type { StoryObj } from '@storybook/react';
 import { Text, TextTheme } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -9,6 +9,10 @@ const meta: Meta<typeof Text> = {
     title: 'shared/Text',
     parameters: {
         layout: 'fullscreen'
+    },
+    args: {
+        text: 'Text example',
+        theme: TextTheme.PRIMARY
     },
     tags: ['autodocs']
 };

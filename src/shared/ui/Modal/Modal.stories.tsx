@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { type Meta } from '@storybook/blocks';
 import type { StoryObj } from '@storybook/react';
 import { Modal } from './Modal';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -9,6 +9,10 @@ const meta: Meta<typeof Modal> = {
     title: 'shared/Modal',
     parameters: {
         layout: 'fullscreen'
+    },
+    args: {
+        isOpen: true,
+        lazy: false
     },
     tags: ['autodocs']
 };

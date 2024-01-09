@@ -52,7 +52,8 @@ module.exports = {
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     moduleNameMapper: {
         '^.+\\.s?css$': 'identity-obj-proxy',
-        '^.+\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '^.+\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        'axios': 'axios/dist/node/axios.cjs'
     },
     // A set of global variables that need to be available in all test environments
     globals: {

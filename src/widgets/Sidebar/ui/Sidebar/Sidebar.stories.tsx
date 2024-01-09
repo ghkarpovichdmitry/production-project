@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { type Meta } from '@storybook/blocks';
 import type { StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';

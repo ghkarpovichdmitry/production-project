@@ -5,15 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { LoginForm } from './LoginForm';
 
-// const meta = {
-//     component: LoginForm,
-//     title: 'features/AuthByUserName/LoginForm',
-//     parameters: {
-//         layout: 'fullscreen'
-//     },
-//     tags: ['autodocs']
-// } satisfies Meta<typeof LoginForm>;
-
 const meta: Meta<typeof LoginForm> = {
     component: LoginForm,
     title: 'features/AuthByUserName/LoginForm',
