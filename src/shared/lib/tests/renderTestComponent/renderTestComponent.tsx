@@ -13,7 +13,10 @@ export interface componentRenderOptions {
 
 export const renderTestComponent =
     (component: ReactNode, options: componentRenderOptions = {}): RenderResult => {
-        const { route = '/', initialState } = options;
+        const {
+            route = '/',
+            initialState
+        } = options;
 
         return render(
             <MemoryRouter initialEntries={[route]}>

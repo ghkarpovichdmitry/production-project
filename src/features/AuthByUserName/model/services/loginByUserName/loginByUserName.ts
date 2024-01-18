@@ -21,7 +21,7 @@ export const loginByUserName =
                 }
                 localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
                 thunkAPI.dispatch(userActions.setAuthData(response.data));
-                return response.data;
+                return response.data; // wrapped with thunkAPI.fulfillWithValue() by default
             } catch (e) {
                 return thunkAPI.rejectWithValue('some error happen');
             }

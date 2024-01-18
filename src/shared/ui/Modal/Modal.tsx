@@ -34,7 +34,9 @@ const Modal = (props: ModalProps): ReactElement => {
     };
 
     useEffect(() => {
-        if (isOpen) { setIsMounted(true); }
+        if (isOpen) {
+            setIsMounted(true);
+        }
     }, [isOpen]);
 
     const onContentClick = (e: MouseEvent): any => {

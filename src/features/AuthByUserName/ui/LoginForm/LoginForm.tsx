@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { loginByUserName } from '../..//model/services/loginByUserName/loginByUserName';
+import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { getLoginState } from '../../model/actions/getLoginState';
 import { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
