@@ -1,5 +1,5 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import { userActions } from 'entities/User/index';
+import { userActions } from 'entities/User';
 import { useDispatch } from 'react-redux';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { classNames } from 'shared/lib/classNames/classNames';

@@ -52,7 +52,9 @@ module.exports = {
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         '@typescript-eslint/prefer-includes': 'off',
         'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error'
+        'react-hooks/exhaustive-deps': 'error',
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/ban-ts-comment": "off"
     },
     settings: {
         react: {

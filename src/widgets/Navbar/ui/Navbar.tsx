@@ -1,5 +1,5 @@
 import { getUserAuthData, userActions } from 'entities/User';
-import { LoginModal } from 'features/AuthByUserName/index';
+import { LoginModal } from 'features/AuthByUserName';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NavBar.module.scss';
@@ -51,7 +51,12 @@ export const Navbar = ({ className }: NavBarProps): ReactElement => {
             >
                 {t('Login')}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
+            {isAuthModal && (
+                <LoginModal
+                    isOpen={isAuthModal}
+                    onClose={onCloseModal}
+                />
+            )}
         </div>
     );
 };

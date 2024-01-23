@@ -6,7 +6,7 @@ import { LoginModal } from './LoginModal';
 
 const meta: Meta = {
     component: LoginModal,
-    title: 'Features/AuthByUserName/LoginModal',
+    title: 'features/AuthByUserName/LoginModal',
     parameters: {
         layout: 'fullscreen'
     },
@@ -16,7 +16,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof LoginModal>;
 
-export const NormalOpen: Story = {
+export const Normal: Story = {
     args: {
         isOpen: true
     },
@@ -30,7 +30,7 @@ export const NormalOpen: Story = {
         })]
 };
 
-export const DarkOpen: Story = {
+export const Dark: Story = {
     args: {
         isOpen: true
     },
@@ -44,30 +44,34 @@ export const DarkOpen: Story = {
         })]
 };
 
-export const NormalClosed: Story = {
+export const NormalIsLoading: Story = {
     args: {
-        isOpen: true
+        isOpen: true,
+        lazy: false
     },
     decorators: [
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: true
             }
         })]
 };
 
-export const DarkClosed: Story = {
+export const DarkIsLoading: Story = {
     args: {
-        isOpen: true
+        isOpen: true,
+        lazy: false
     },
     decorators: [
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: true
             }
         })]
 };
