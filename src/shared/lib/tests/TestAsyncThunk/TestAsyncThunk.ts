@@ -1,7 +1,7 @@
 import { type StateScheme } from 'app/providers/StoreProvider';
 import { type AsyncThunkAction } from '@reduxjs/toolkit';
 
-type ActionCreatorType<Return, Arg, RejectedValue>
+type ActionCreatorType<Return, Arg, _RejectedValue>
     // = (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectedValue: RejectedValue }>;
     = (arg: Arg) => AsyncThunkAction<Return, Arg, any>;
 
