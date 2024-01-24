@@ -8,7 +8,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUserName';
+import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLoginUserName';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -25,7 +25,7 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(({ className }: LoginFormProps): ReactElement => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const username = useSelector(getLoginUsername);
+    const username = useSelector(getLoginUserName);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);

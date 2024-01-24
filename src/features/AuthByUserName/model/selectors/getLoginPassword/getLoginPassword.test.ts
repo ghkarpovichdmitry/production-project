@@ -5,6 +5,7 @@ import { type DeepPartial } from '@reduxjs/toolkit';
 describe('getLoginPassword test', function () {
     test('Should return password', () => {
         const state: DeepPartial<StateScheme> = {
+            user: undefined,
             loginForm: {
                 password: '12345678'
             }

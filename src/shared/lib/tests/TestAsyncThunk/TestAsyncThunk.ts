@@ -2,18 +2,17 @@ import { type StateScheme } from 'app/providers/StoreProvider';
 import { type AsyncThunkAction } from '@reduxjs/toolkit';
 
 type ActionCreatorType<Return, Arg, RejectedValue>
-    = (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectedValue: RejectedValue }>;
+    // = (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectedValue: RejectedValue }>;
+    = (arg: Arg) => AsyncThunkAction<Return, Arg, any>;
 
 interface ActionInterface<ThunkArg, PayloadValue> {
     type: string
     payload: PayloadValue
-    error?: {
-        message: string
-    }
+    error?: unknown
     meta: {
         requestId: string
         arg: ThunkArg
-        aborted: boolean
+        aborted?: boolean
         requestStatus: string
     }
 }

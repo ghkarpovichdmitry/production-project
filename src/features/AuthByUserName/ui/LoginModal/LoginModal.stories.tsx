@@ -46,8 +46,7 @@ export const Dark: Story = {
 
 export const NormalIsLoading: Story = {
     args: {
-        isOpen: true,
-        lazy: false
+        isOpen: true
     },
     decorators: [
         ThemeDecorator(Theme.LIGHT),
@@ -62,8 +61,7 @@ export const NormalIsLoading: Story = {
 
 export const DarkIsLoading: Story = {
     args: {
-        isOpen: true,
-        lazy: false
+        isOpen: true
     },
     decorators: [
         ThemeDecorator(Theme.DARK),
