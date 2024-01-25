@@ -54,7 +54,12 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         "@typescript-eslint/ban-ts-ignore": "off",
-        "@typescript-eslint/ban-ts-comment": "off"
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-misused-promises": [2, {
+            "checksVoidReturn": {
+                "attributes": false
+            }
+        }]
     },
     settings: {
         react: {

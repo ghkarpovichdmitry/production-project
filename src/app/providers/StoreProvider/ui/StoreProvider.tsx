@@ -2,13 +2,13 @@ import { type DeepPartial, type ReducersMapObject } from '@reduxjs/toolkit';
 import { type ReactElement, type ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { createReduxStore } from 'app/providers/StoreProvider';
-import { type StateScheme } from 'app/providers/StoreProvider/config/StateScheme';
+import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 
 // ! In order to make async reducers work in 'storybook' we need to add asyncReducers into storeProvider through props
 interface StoreProviderProps {
     children: ReactNode
-    initialState?: DeepPartial<StateScheme>
-    asyncReducers?: DeepPartial<ReducersMapObject<StateScheme>>
+    initialState?: DeepPartial<StateSchema>
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 }
 
 export const StoreProvider = ({
@@ -17,8 +17,8 @@ export const StoreProvider = ({
     asyncReducers
 }: StoreProviderProps): ReactElement => {
     const store = createReduxStore(
-        initialState as StateScheme,
-        asyncReducers as ReducersMapObject<StateScheme>
+        initialState as StateSchema,
+        asyncReducers as ReducersMapObject<StateSchema>
     );
 
     return (

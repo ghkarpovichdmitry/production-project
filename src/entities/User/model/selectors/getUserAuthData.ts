@@ -1,4 +1,4 @@
-import { type StateScheme } from 'app/providers/StoreProvider';
+import { type StateSchema } from 'app/providers/StoreProvider';
 import { type User } from 'entities/User';
 
-export const getUserAuthData = (state: StateScheme): User => state.user.authData;
+export const getUserAuthData = (state: StateSchema): User => state.user.authData;

@@ -1,5 +1,5 @@
 import { Button } from 'shared/ui/Button/Button';
-import { useEffect, useState } from 'react';
+import { type ReactElement, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface BugButtonProps {
@@ -7,7 +7,7 @@ interface BugButtonProps {
 }
 
 // => Component for errors testing
-export const BugButton = (props: BugButtonProps): any => {
+export const BugButton = (props: BugButtonProps): ReactElement => {
     const [pageError, setPageError] = useState(false);
     const { t } = useTranslation();
 

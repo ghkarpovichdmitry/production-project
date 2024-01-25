@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstname": "Dzmitry",
+    "lastname": "Karpovich",
+    "age": "33",
+    "currency": "zl",
+    "country": "Poland",
+    "city": "Gdansk",
+    "username": "admin",
+    "avatar": "https://"
   }
 }

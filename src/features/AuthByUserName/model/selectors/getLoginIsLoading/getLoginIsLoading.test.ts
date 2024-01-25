@@ -1,31 +1,31 @@
 import { getLoginIsLoading } from './getLoginIsLoading';
-import { type StateScheme } from 'app/providers/StoreProvider';
+import { type StateSchema } from 'app/providers/StoreProvider';
 import { type DeepPartial } from '@reduxjs/toolkit';
 
 describe('getLoginIsLoading test', function () {
     test('Should return true', () => {
-        const state: DeepPartial<StateScheme> = {
+        const state: DeepPartial<StateSchema> = {
             loginForm: {
                 isLoading: true
             }
         };
 
-        expect(getLoginIsLoading(state as StateScheme)).toEqual(true);
+        expect(getLoginIsLoading(state as StateSchema)).toEqual(true);
     });
 
     test('Should return false', () => {
-        const state: DeepPartial<StateScheme> = {
+        const state: DeepPartial<StateSchema> = {
             loginForm: {
                 isLoading: false
             }
         };
 
-        expect(getLoginIsLoading(state as StateScheme)).toEqual(false);
+        expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
     });
 
     test('Should work with empty state', () => {
-        const state: DeepPartial<StateScheme> = {};
+        const state: DeepPartial<StateSchema> = {};
 
-        expect(getLoginIsLoading(state as StateScheme)).toEqual(false);
+        expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
     });
 });

@@ -1,3 +1,3 @@
-import { type StateScheme } from 'app/providers/StoreProvider';
+import { type StateSchema } from 'app/providers/StoreProvider';
 
-export const getLoginIsLoading = (state: StateScheme): boolean => state?.loginForm?.isLoading || false;
+export const getLoginIsLoading = (state: StateSchema): boolean => state?.loginForm?.isLoading || false;

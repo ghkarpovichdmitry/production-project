@@ -36,7 +36,7 @@ describe('loginByUserName test', function () {
 
 // ! old tests below - keep for now, remove later
 // #
-// import { type StateScheme } from 'app/providers/StoreProvider';
+// import { type StateSchema } from 'app/providers/StoreProvider';
 // import { type DeepPartial, Dispatch } from '@reduxjs/toolkit';
 // import { beforeEach } from '@jest/globals';
 // jest.mock('axios');
@@ -44,7 +44,7 @@ describe('loginByUserName test', function () {
 //
 // describe('loginByUserName test', function () {
 //     let dispatch = Dispatch;
-//     let getState = () => StateScheme;
+//     let getState = () => StateSchema;
 //
 //     beforeEach(() => {
 //         dispatch = jest.fn();

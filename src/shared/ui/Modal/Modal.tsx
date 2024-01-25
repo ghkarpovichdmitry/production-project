@@ -43,14 +43,14 @@ const Modal = (props: ModalProps): ReactElement => {
         e.stopPropagation();
     };
 
-    const closeHandler = useCallback((): void => {
-        setIsClosing(true);
-        timerRef.current = window.setTimeout(() => {
-            if (onClose) {
+    const closeHandler = useCallback(() => {
+        if (onClose) {
+            setIsClosing(true);
+            timerRef.current = window.setTimeout(() => {
                 onClose();
                 setIsClosing(false);
-            }
-        }, ANIMATION_DELAY);
+            }, ANIMATION_DELAY);
+        }
     }, [onClose]);
 
     const onKeyDown = useCallback((e: KeyboardEvent): void => {
@@ -77,7 +77,10 @@ const Modal = (props: ModalProps): ReactElement => {
         <Portal>
             <div className={classNames(cls.Modal, mods, [className])}>
                 <div className={cls.overlay} onClick={closeHandler}>
-                    <div className={cls.content} onClick={onContentClick}>
+                    <div
+                        className={cls.content}
+                        onClick={onContentClick}
+                    >
                         {children}
                     </div>
                 </div>

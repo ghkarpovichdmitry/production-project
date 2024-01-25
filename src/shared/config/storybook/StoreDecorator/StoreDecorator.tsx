@@ -1,15 +1,15 @@
 import { type DeepPartial, type ReducersMapObject } from '@reduxjs/toolkit';
 import { type StoryFn } from '@storybook/react';
-import { type StateScheme, StoreProvider } from 'app/providers/StoreProvider';
+import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
 
-const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateScheme>> = {
+const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
     loginForm: loginReducer
 };
 
 export const StoreDecorator = (
-    state: DeepPartial<StateScheme>,
-    asyncReducers?: DeepPartial<ReducersMapObject<StateScheme>>
+    state: DeepPartial<StateSchema>,
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 ) => (StoryComponent: StoryFn) => { // eslint-disable-line react/display-name
     return (
         <StoreProvider

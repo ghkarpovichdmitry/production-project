@@ -1,5 +1,5 @@
 import { type DeepPartial } from '@reduxjs/toolkit';
-import { type StateScheme, StoreProvider } from 'app/providers/StoreProvider';
+import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { type ReactNode } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { render, type RenderResult } from '@testing-library/react';
@@ -8,7 +8,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 export interface componentRenderOptions {
     route?: string
-    initialState?: DeepPartial<StateScheme>
+    initialState?: DeepPartial<StateSchema>
 }
 
 export const renderTestComponent =

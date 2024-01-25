@@ -3,6 +3,6 @@ export interface User {
     username: string
 }
 
-export interface UserScheme {
+export interface UserSchema {
     authData?: User // if empty => unathorized
 }

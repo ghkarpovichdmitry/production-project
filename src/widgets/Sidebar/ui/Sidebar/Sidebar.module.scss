@@ -38,31 +38,8 @@
     flex-direction: column;
 }
 
-.item {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-    width: 100%;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
-    width: 24px;
-}
-
 .collapsed {
     width: var(--sidebar-width-collapsed);
-
-    .link {
-        width: 0;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
 
     .icon {
         width: 20px;

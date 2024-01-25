@@ -1,6 +1,6 @@
-import { type CounterScheme } from 'entities/Counter';
+import { type CounterSchema } from 'entities/Counter';
 import { getCounter } from '../getCounter/getCounter';
 import { createSelector } from 'reselect';
 
 export const getCounterValue =
-    createSelector(getCounter, (counter: CounterScheme) => counter.value);
+    createSelector(getCounter, (counter: CounterSchema) => counter.value);

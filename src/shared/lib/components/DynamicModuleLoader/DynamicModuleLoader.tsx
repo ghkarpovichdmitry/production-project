@@ -1,14 +1,14 @@
 import React, { type FC, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { type StoreWithReducerManager } from 'app/providers/StoreProvider';
-import { type StateSchemeKey } from 'app/providers/StoreProvider/config/StateScheme';
+import { type StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
 import { type Reducer } from 'redux';
 
 export type ReducersList = {
-    [name in StateSchemeKey]?: Reducer // should be optional
+    [name in StateSchemaKey]?: Reducer // should be optional
 };
 
-type ReducersListEntry = [StateSchemeKey, Reducer];
+type ReducersListEntry = [StateSchemaKey, Reducer];
 
 export interface DynamicModuleLoaderProps {
     reducers: ReducersList
