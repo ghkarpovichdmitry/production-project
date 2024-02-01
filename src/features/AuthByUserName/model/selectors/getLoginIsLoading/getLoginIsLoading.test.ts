@@ -1,6 +1,5 @@
 import { getLoginIsLoading } from './getLoginIsLoading';
 import { type StateSchema } from 'app/providers/StoreProvider';
-import { type DeepPartial } from '@reduxjs/toolkit';
 
 describe('getLoginIsLoading test', function () {
     test('Should return true', () => {

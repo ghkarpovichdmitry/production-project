@@ -1,4 +1,3 @@
-import { type DeepPartial } from '@reduxjs/toolkit';
 import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { type ReactNode } from 'react';
 import { I18nextProvider } from 'react-i18next';
@@ -20,11 +19,11 @@ export const renderTestComponent =
 
         return render(
             <MemoryRouter initialEntries={[route]}>
-                <I18nextProvider i18n={i18nForTests}>
-                    <StoreProvider initialState={initialState}>
+                <StoreProvider initialState={initialState}>
+                    <I18nextProvider i18n={i18nForTests}>
                         {component}
-                    </StoreProvider>
-                </I18nextProvider>
+                    </I18nextProvider>
+                </StoreProvider>
             </MemoryRouter>
         );
     };

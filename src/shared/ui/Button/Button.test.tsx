@@ -3,7 +3,6 @@ import { Button, ButtonTheme, ButtonType } from './Button';
 
 describe('Button tests', () => {
     test('Button with text', () => {
-        // eslint-disable-next-line i18next/no-literal-string
         render(<Button>Test button</Button>);
 
         expect(screen.getByText('Test button')).toBeInTheDocument();
@@ -19,7 +18,7 @@ describe('Button tests', () => {
         const { container } =
             render(<Button theme={ButtonTheme.CLEAR}><i className="children-icon" /></Button>);
 
-        expect(container.firstChild.firstChild).toHaveClass('children-icon');
+        expect(container?.firstChild?.firstChild).toHaveClass('children-icon');
     });
 
     test('Button with custom attribute', () => {

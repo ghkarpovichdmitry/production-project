@@ -57,7 +57,8 @@ module.exports = {
     },
     // A set of global variables that need to be available in all test environments
     globals: {
-        _IS_DEV_: true
+        _IS_DEV_: true,
+        _API_: true
     }
 
     // Indicates whether the coverage information should be collected while executing the test

@@ -13,6 +13,7 @@
     "paths": {
       "*": ["./src/*"]
     },
+    "strict": true,
   },
   "ts-node": {
     "compilerOptions": {
@@ -30,5 +31,5 @@
     "./config",
     "./.eslintrc.js",
     "./webpack.config.ts"
-  ],
+  ]
 }

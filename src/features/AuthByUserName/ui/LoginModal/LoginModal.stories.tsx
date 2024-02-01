@@ -25,7 +25,8 @@ export const Normal: Story = {
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: false
             }
         })]
 };
@@ -39,7 +40,8 @@ export const Dark: Story = {
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: false
             }
         })]
 };

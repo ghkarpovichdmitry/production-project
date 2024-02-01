@@ -1,9 +1,8 @@
 import { getLoginUserName } from './getLoginUserName';
 import { type StateSchema } from 'app/providers/StoreProvider';
-import { type DeepPartial } from '@reduxjs/toolkit';
 
 describe('getLoginUserName test', function () {
-    test('Should return password', () => {
+    test('Should return username', () => {
         const state: DeepPartial<StateSchema> = {
             user: undefined,
             loginForm: {

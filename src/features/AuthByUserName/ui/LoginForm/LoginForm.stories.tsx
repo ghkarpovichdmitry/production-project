@@ -22,7 +22,8 @@ export const Normal: Story = {
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: false
             }
         })]
 };
@@ -33,7 +34,8 @@ export const Dark: Story = {
         StoreDecorator({
             loginForm: {
                 username: 'user',
-                password: 'pass'
+                password: 'pass',
+                isLoading: false
             }
         })]
 };
@@ -43,6 +45,9 @@ export const NormalWithError: Story = {
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
             loginForm: {
+                username: '',
+                password: '',
+                isLoading: false,
                 error: 'ERROR'
             }
         })]
@@ -53,6 +58,9 @@ export const DarkWithError: Story = {
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
             loginForm: {
+                isLoading: false,
+                username: '',
+                password: '',
                 error: 'ERROR'
             }
         })]
@@ -63,6 +71,8 @@ export const NormalWithLoading: Story = {
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
             loginForm: {
+                username: '',
+                password: '',
                 isLoading: true
             }
         })]
@@ -73,6 +83,8 @@ export const DarkWithLoading: Story = {
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
             loginForm: {
+                username: '',
+                password: '',
                 isLoading: true
             }
         })]

@@ -10,7 +10,8 @@ module.exports = {
         'plugin:storybook/recommended'
     ],
     globals: {
-        _IS_DEV_: true
+        _IS_DEV_: true,
+        _API_: true
     },
     parserOptions: {
         ecmaVersion: 'latest',
@@ -59,7 +60,9 @@ module.exports = {
             "checksVoidReturn": {
                 "attributes": false
             }
-        }]
+        }],
+        "no-undef": "off",
+        '@typescript-eslint/no-non-null-assertion': 'off'
     },
     settings: {
         react: {

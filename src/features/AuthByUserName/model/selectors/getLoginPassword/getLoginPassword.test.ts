@@ -1,6 +1,5 @@
 import { getLoginPassword } from './getLoginPassword';
 import { type StateSchema } from 'app/providers/StoreProvider';
-import { type DeepPartial } from '@reduxjs/toolkit';
 
 describe('getLoginPassword test', function () {
     test('Should return password', () => {

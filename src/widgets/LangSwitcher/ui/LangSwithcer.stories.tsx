@@ -23,7 +23,7 @@ export const Normal: Story = {
     decorators: [
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
-            user: { authData: {} }
+            user: {}
         })
     ]
 };
@@ -35,7 +35,7 @@ export const NormalShort: Story = {
     decorators: [
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
-            user: { authData: {} }
+            user: {}
         })
     ]
 };
