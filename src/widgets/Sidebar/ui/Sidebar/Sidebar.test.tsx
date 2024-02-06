@@ -15,10 +15,10 @@ describe('Sidebar test', () => {
         const sidebar = screen.getByTestId('sidebar');
         const toggleBtn = screen.getByTestId('sidebar-toggle');
 
-        expect(sidebar).toHaveClass('collapsed');
+        expect(sidebar).not.toHaveClass('collapsed');
 
         fireEvent.click(toggleBtn);
 
-        expect(sidebar).not.toHaveClass('collapsed');
+        expect(sidebar).toHaveClass('collapsed');
     });
 });
