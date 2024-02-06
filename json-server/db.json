@@ -28,11 +28,11 @@
   "profile": {
     "firstname": "Dzmitry",
     "lastname": "Karpovich",
-    "age": "33",
-    "currency": "zl",
+    "age": 33,
+    "currency": "ZL",
     "country": "Poland",
     "city": "Gdansk",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "avatar": "https://images.unsplash.com/photo-1706779847951-6dd0ac82cf01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D"
   }
 }

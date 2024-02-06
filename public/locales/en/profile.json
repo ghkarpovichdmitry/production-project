@@ -1,8 +1,9 @@
 {
   "Profile Page": "Profile page",
-  "Profile": "Profile",
-  "Edit": "Edit",
   "Your name": "Your name",
   "Your password": "Your password",
-  "Your lastname": "Your lastname"
+  "Your lastname": "Your lastname",
+  "Enter the avatar link": "Enter the avatar link",
+  "Enter currency": "Enter currency",
+  "Enter country": "Enter country"
 }

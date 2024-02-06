@@ -5,27 +5,25 @@ import { Counter } from './Counter';
 
 describe('Counter test', function () {
     test('Counter value check', () => {
-        renderTestComponent(<Counter />,
-            {
-                initialState: {
-                    counter: {
-                        value: 10
-                    }
+        renderTestComponent(<Counter/>, {
+            initialState: {
+                counter: {
+                    value: 10
                 }
-            });
+            }
+        });
 
         expect(screen.getByTestId('counter-value')).toHaveTextContent('10');
     });
 
     test('Counter increment fn check', () => {
-        renderTestComponent(<Counter />,
-            {
-                initialState: {
-                    counter: {
-                        value: 2
-                    }
+        renderTestComponent(<Counter/>, {
+            initialState: {
+                counter: {
+                    value: 2
                 }
-            });
+            }
+        });
 
         const incrementBtn = screen.getByTestId('increment-btn');
 
@@ -35,14 +33,13 @@ describe('Counter test', function () {
     });
 
     test('Counter decrement fn check', () => {
-        renderTestComponent(<Counter />,
-            {
-                initialState: {
-                    counter: {
-                        value: 2
-                    }
+        renderTestComponent(<Counter/>, {
+            initialState: {
+                counter: {
+                    value: 2
                 }
-            });
+            }
+        });
 
         const decrementBtn = screen.getByTestId('decrement-btn');
 

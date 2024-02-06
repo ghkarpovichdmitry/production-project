@@ -29,7 +29,7 @@ module.exports = {
         '@typescript-eslint/indent': [2, 4],
         '@typescript-eslint/semi': ['error', 'always'],
         'react/jsx-indent-props': [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', 'tsx'] }],
+        'react/jsx-filename-extension': [2, {extensions: ['.js', '.jsx', 'tsx']}],
         '@typescript-eslint/no-unused-vars': [
             'error',
             {
@@ -50,19 +50,23 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to']
             }
         ],
-        'max-len': ['error', { ignoreComments: true, code: 120 }],
+        'max-len': ['error', {
+            ignoreComments: true,
+            code: 120
+        }],
         '@typescript-eslint/prefer-includes': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
-        "@typescript-eslint/ban-ts-ignore": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/no-misused-promises": [2, {
-            "checksVoidReturn": {
+        '@typescript-eslint/ban-ts-ignore': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-misused-promises': [2, {
+            'checksVoidReturn': {
                 "attributes": false
             }
         }],
-        "no-undef": "off",
-        '@typescript-eslint/no-non-null-assertion': 'off'
+        'no-undef': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/comma-dangle': [0, 'never']
     },
     settings: {
         react: {

@@ -3,7 +3,7 @@ import { userActions } from 'entities/User';
 import { useDispatch } from 'react-redux';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppRouter } from 'app/providers/router/ui/AppRouter';
+import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { type ReactElement, Suspense, useEffect } from 'react';

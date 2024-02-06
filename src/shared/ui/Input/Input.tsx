@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 import {
     type ChangeEvent,
@@ -8,13 +8,14 @@ import {
     useState, useEffect, useRef
 } from 'react';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>;
 
 interface InputProps extends HTMLInputProps {
     className?: string
-    value?: string
+    value?: string | number
     onChange?: (value: string) => void
     autofocus?: boolean
+    readonly?: boolean
 }
 
 export const Input = memo((props: InputProps): ReactElement => {
@@ -26,6 +27,7 @@ export const Input = memo((props: InputProps): ReactElement => {
         placeholder,
         autoFocus,
         autofocus,
+        readonly,
         ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
@@ -36,18 +38,29 @@ export const Input = memo((props: InputProps): ReactElement => {
             setIsFocused(true);
             ref.current?.focus();
         }
-        return () => { setIsFocused(false); };
+        return () => {
+            setIsFocused(false);
+        };
     }, [autofocus]);
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
         onChange?.(e.target.value);
     };
 
-    const onFocus = (): void => { setIsFocused(true); };
-    const onBlur = (): void => { setIsFocused(false); };
+    const onFocus = (): void => {
+        setIsFocused(true);
+    };
+
+    const onBlur = (): void => {
+        setIsFocused(false);
+    };
+
+    const mods: Mods = {
+        [cls.readonly]: readonly
+    };
 
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}
@@ -62,6 +75,7 @@ export const Input = memo((props: InputProps): ReactElement => {
                 className={cls.input}
                 value={value}
                 onChange={handleInputChange}
+                readOnly={readonly}
                 {...otherProps}
             />
         </div>

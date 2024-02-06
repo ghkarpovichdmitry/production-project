@@ -1,8 +1,9 @@
 {
   "Profile Page": "Strona profilu",
-  "Profile": "Profil",
-  "Edit": "Edytować",
   "Your name": "Twoje imię",
   "Your password": "Twoje hasło",
-  "Your lastname": "Twoje nazwisko"
+  "Your lastname": "Twoje nazwisko",
+  "Enter the avatar link": "Wprowadź link do awatara",
+  "Enter currency": "Wprowadź walutę",
+  "Enter country": "Wprowadź kraj"
 }

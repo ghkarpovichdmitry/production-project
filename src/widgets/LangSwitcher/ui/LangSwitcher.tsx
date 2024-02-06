@@ -9,8 +9,14 @@ interface LangSwitcherProps {
     short?: boolean
 }
 
-export const LangSwitcher = memo(({ className, short = false }: LangSwitcherProps): ReactElement => {
-    const { t, i18n } = useTranslation();
+export const LangSwitcher = memo(({
+    className,
+    short = false
+}: LangSwitcherProps): ReactElement => {
+    const {
+        t,
+        i18n
+    } = useTranslation();
 
     const toggleLang = (): void => {
         void i18n.changeLanguage(i18n.language === 'en' ? 'pl' : 'en');

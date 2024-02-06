@@ -3,8 +3,8 @@
   "Welcome to React": "Witamy w React",
   "Translate": "Przetłumacz",
   "Loading": "Ładowanie...",
-  "Page Language": "english",
-  "Page Language Short": "en",
+  "Page Language": "Angielski",
+  "Page Language Short": "Ang",
   "About us": "O nas",
   "Main page": "Strona główna",
   "Toggle": "Przełącz",
@@ -19,5 +19,9 @@
   "Authorisation form": "Formularz zezwolenia",
   "You have entered wrong login or password": "Wprowadzono nieprawidłowy login lub hasło",
   "Logout": "Wylogowanie",
-  "Throw error": "throw error pl version"
+  "Throw error": "throw error pl version",
+  "Profile": "Profil",
+  "Edit": "Edytować",
+  "Cancel": "Anulować",
+  "Save": "Zapisz"
 }

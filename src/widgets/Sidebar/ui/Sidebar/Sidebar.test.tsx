@@ -4,13 +4,13 @@ import { renderTestComponent } from 'shared/lib/tests/renderTestComponent/render
 
 describe('Sidebar test', () => {
     test('Sidebar className test', () => {
-        renderTestComponent(<Sidebar />);
+        renderTestComponent(<Sidebar/>);
 
         expect(screen.getByTestId('sidebar')).toHaveClass('Sidebar');
     });
 
     test('Sidebar test toggle', () => {
-        renderTestComponent(<Sidebar />);
+        renderTestComponent(<Sidebar/>);
 
         const sidebar = screen.getByTestId('sidebar');
         const toggleBtn = screen.getByTestId('sidebar-toggle');

@@ -3,8 +3,8 @@
   "Welcome to React": "Welcome to React",
   "Translate": "Translate",
   "Loading": "Loading...",
-  "Page Language": "polski",
-  "Page Language Short": "pl",
+  "Page Language": "Polski",
+  "Page Language Short": "Pl",
   "About us": "About us",
   "Main page": "Main page",
   "Toggle": "Toggle",
@@ -19,5 +19,9 @@
   "Authorisation form": "Authorisation form",
   "You have entered wrong login or password": "You have entered wrong login or password",
   "Logout": "Logout",
-  "Throw error": "throw error"
+  "Throw error": "throw error",
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "Cancel": "Cancel",
+  "Save": "Save"
 }

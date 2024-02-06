@@ -10,7 +10,10 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps): ReactElement => {
-    const { theme, toggleTheme } = useTheme();
+    const {
+        theme,
+        toggleTheme
+    } = useTheme();
 
     return (
         <Button
