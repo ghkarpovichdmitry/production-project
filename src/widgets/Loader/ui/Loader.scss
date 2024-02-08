@@ -67,9 +67,10 @@
     height: 61px;
     display: inline-block;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .ldio-71p9c9c4u08 {

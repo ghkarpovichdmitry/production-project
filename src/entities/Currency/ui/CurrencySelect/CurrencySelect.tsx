@@ -36,6 +36,7 @@ export const CurrencySelect = memo(({
             value={value}
             onChange={onChangeHandler}
             readonly={readonly}
+            data-testid="currency-select"
         />
     );
 });

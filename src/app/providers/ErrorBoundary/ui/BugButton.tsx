@@ -8,16 +8,16 @@ interface BugButtonProps {
 
 // => Component for errors testing
 export const BugButton = (props: BugButtonProps): ReactElement => {
-    const [pageError, setPageError] = useState(false);
+    const [errorPage, setErrorPage] = useState(false);
     const { t } = useTranslation();
 
-    const runError = (): void => { setPageError(true); };
+    const runError = (): void => { setErrorPage(true); };
 
     useEffect(() => {
-        if (pageError) {
+        if (errorPage) {
             throw new Error('Page error');
         }
-    }, [pageError]);
+    }, [errorPage]);
 
     return (
         <Button onClick={runError} className={props.className}>

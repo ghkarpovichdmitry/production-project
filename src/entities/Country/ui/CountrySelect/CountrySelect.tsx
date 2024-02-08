@@ -36,6 +36,7 @@ export const CountrySelect = memo(({
             value={value}
             onChange={onChangeHandler}
             readonly={readonly}
+            data-testid="country-select"
         />
     );
 });

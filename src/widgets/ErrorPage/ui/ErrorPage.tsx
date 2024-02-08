@@ -1,14 +1,14 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './PageError.module.scss';
+import cls from './ErrorPage.module.scss';
 import { type ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
 
-interface PageErrorProps {
+interface ErrorPageProps {
     className?: string
 }
 
-export const PageError = ({ className }: PageErrorProps): ReactElement => {
+export const ErrorPage = ({ className }: ErrorPageProps): ReactElement => {
     const { t } = useTranslation();
 
     const reloadThePage = (): void => {
@@ -16,7 +16,7 @@ export const PageError = ({ className }: PageErrorProps): ReactElement => {
     };
 
     return (
-        <div className={classNames(cls.PageError, {}, [className])}>
+        <div className={classNames(cls.ErrorPage, {}, [className])}>
             <p>{t('Unexpected error')}</p>
             <Button onClick={reloadThePage}>{t('Refresh the page')}</Button>
         </div>

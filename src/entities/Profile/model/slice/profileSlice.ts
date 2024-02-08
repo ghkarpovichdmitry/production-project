@@ -21,6 +21,7 @@ export const profileSlice = createSlice({
         cancelEdit: (state: ProfileSchema) => {
             state.readonly = true;
             state.form = state.data;
+            state.validateErrors = undefined;
         },
         updateProfile: (state: ProfileSchema, action: PayloadAction<Profile>) => {
             state.form = {
@@ -46,7 +47,7 @@ export const profileSlice = createSlice({
                 state.error = action.payload;
             })
             .addCase(updateProfileData.pending, (state: ProfileSchema) => {
-                state.error = undefined;
+                state.validateErrors = undefined;
                 state.isLoading = true;
             })
             .addCase(updateProfileData.fulfilled, (

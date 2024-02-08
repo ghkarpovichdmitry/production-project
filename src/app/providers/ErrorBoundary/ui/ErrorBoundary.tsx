@@ -1,5 +1,5 @@
 import React, { type ErrorInfo, type ReactNode, Suspense } from 'react';
-import { PageError } from 'widgets/PageError';
+import { ErrorPage } from 'widgets/ErrorPage';
 
 interface ErrorBoundaryProps {
     children: ReactNode
@@ -22,14 +22,14 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     }
 
     // componentDidCatch (error: Error, info: ErrorInfo): void {
-    componentDidCatch (error: Error, info: ErrorInfo): any {
+    componentDidCatch (error: Error, errorInfo: ErrorInfo): any {
         // Example "componentStack":
         //   in ComponentThatThrows (created by App)
         //   in ErrorBoundary (created by App)
         //   in div (created by App)
         //   in App
         // logErrorToMyService(error, info.componentStack);
-        console.log('error message in ErrorBoundary componentDidCatch ', error.message, info);
+        console.log('error message in ErrorBoundary componentDidCatch ', error, errorInfo);
     }
 
     render (): any {
@@ -38,9 +38,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
         if (hasError) {
             // return <Suspense fallback={'error from ErrorBoundary'}><PageError/></Suspense>;
-            return (<Suspense fallback={''}>
-                <PageError/>
-            </Suspense>);
+            return (
+                <Suspense fallback={''}>
+                    <ErrorPage/>
+                </Suspense>
+            );
         }
 
         return children;

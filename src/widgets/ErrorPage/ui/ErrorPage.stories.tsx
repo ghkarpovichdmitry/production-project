@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { PageError } from 'widgets/PageError';
+import { ErrorPage } from 'widgets/ErrorPage';
 
 const meta: Meta = {
-    component: PageError,
-    title: 'widgets/PageError',
+    component: ErrorPage,
+    title: 'widgets/ErrorPage',
     parameters: {
         layout: 'fullscreen'
     },
@@ -13,7 +13,7 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof PageError>;
+type Story = StoryObj<typeof ErrorPage>;
 
 export const Light: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]

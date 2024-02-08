@@ -22,7 +22,8 @@ export const Select = memo(({
     options,
     value,
     onChange,
-    readonly
+    readonly,
+    ...otherProps
 }: SelectProps): ReactElement => {
     const mods: Mods = {};
 
@@ -36,6 +37,7 @@ export const Select = memo(({
                 key={opt.value}
                 value={opt.value}
                 className={cls.option}
+                role='option'
             >
                 {opt.content}
             </option>
@@ -46,10 +48,11 @@ export const Select = memo(({
         <div className={classNames(cls.Wrapper, mods, [className])}>
             {label && <span className={cls.label}>{label}</span>}
             <select
-                className={cls.select}
+                className={`${cls.select} select-element`}
                 value={value}
                 onChange={onChangeHandler}
                 disabled={readonly}
+                {...otherProps}
             >
                 {optionsList}
             </select>

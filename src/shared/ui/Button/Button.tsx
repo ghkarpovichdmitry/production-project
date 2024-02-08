@@ -3,7 +3,6 @@ import cls from './Button.module.scss';
 import { type ButtonHTMLAttributes, type ReactNode, memo } from 'react';
 
 export enum ButtonTheme {
-    DEFAULT = 'default',
     CLEAR = 'clear',
     CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
@@ -42,7 +41,7 @@ export const Button = memo((props: ButtonProps) => {
         className,
         children,
         disabled,
-        theme = ButtonTheme.DEFAULT,
+        theme = ButtonTheme.OUTLINE,
         square,
         ...otherProps
     } = props;
