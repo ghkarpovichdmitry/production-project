@@ -67,7 +67,8 @@ module.exports = {
         }],
         'no-undef': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/comma-dangle': [0, 'never']
+        '@typescript-eslint/comma-dangle': [0, 'never'],
+        'indent': [1, 4]
     },
     settings: {
         react: {
