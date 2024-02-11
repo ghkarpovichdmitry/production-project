@@ -37,7 +37,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps): ReactElement => {
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
-    const { t } = useTranslation('profile');
+    const { t } = useTranslation('profilePage');
 
     const validateErrorTranslates = {
         [ValidateProfileError.NO_DATA]: t('No data'),

@@ -1,44 +1,34 @@
-import React, { memo, type ReactElement, Suspense, useMemo } from 'react';
+import React, { memo, type ReactElement, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from 'shared/config/routeConfig/routerConfig';
+import { type AppRoutesProps, routeConfig } from 'shared/config/routeConfig/routerConfig';
 import { PageLoader } from 'widgets/PageLoader';
-import { useSelector } from 'react-redux';
+import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
 import { getUserAuthData } from 'entities/User';
+import { useSelector } from 'react-redux';
 
 const AppRouter = (): ReactElement => {
     const isAuth = useSelector(getUserAuthData);
 
-    const routes = useMemo(() => Object.values(routeConfig).filter(route => {
-        if (route.authOnly && !isAuth) {
-            return false;
-        }
+    const renderWithRouter = useCallback((router: AppRoutesProps) => {
+        const element = (<Suspense fallback={<PageLoader/>}>
+            <div className="page-wrapper">
+                {router.element}
+            </div>
+        </Suspense>);
 
-        return true;
-    }), [isAuth]);
+        return (
+            <Route
+                key={router.path}
+                path={router.path}
+                element={router.authOnly && isAuth ? <RequireAuth>{element}</RequireAuth> : element}
+            />
+        ); // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // should render only once because of hidden routes
 
     return (
-
         <Routes>
-            {routes.map(
-                ({
-                    path,
-                    element
-                }) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        element={
-                            <Suspense fallback={<PageLoader/>}>
-                                <div className="page-wrapper">
-                                    {element}
-                                </div>
-                            </Suspense>
-                        }
-                    />
-                )
-            )}
+            {Object.values(routeConfig).map(renderWithRouter)}
         </Routes>
-
     );
 };
 

@@ -1,7 +1,6 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import { userActions } from 'entities/User';
-import { useDispatch } from 'react-redux';
-import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import { getUserIsInited, userActions } from 'entities/User';
+import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
@@ -12,10 +11,10 @@ import { Loader } from 'widgets/Loader/ui/Loader';
 const App = (): ReactElement => {
     const { theme } = useTheme();
     const dispatch = useDispatch();
+    const isInited = useSelector(getUserIsInited);
 
     useEffect(() => {
-        const userData = localStorage.getItem(USER_LOCALSTORAGE_KEY);
-        userData && dispatch(userActions.initAuthData(JSON.parse(userData)));
+        dispatch(userActions.initAuthData());
     }, [dispatch]);
 
     return (
@@ -23,8 +22,8 @@ const App = (): ReactElement => {
             <Suspense fallback={<Loader/>}>
                 <Navbar/>
                 <div className="content-page">
-                    <Sidebar />
-                    <AppRouter/>
+                    <Sidebar/>
+                    {isInited && <AppRouter/>}
                 </div>
             </Suspense>
         </div>
