@@ -28,7 +28,7 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-indent': [2, 4],
         '@typescript-eslint/indent': [2, 4],
-        '@typescript-eslint/semi': ['error', 'always'],
+        '@typescript-eslint/semi': ['warn', 'always'],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [2, {extensions: ['.js', '.jsx', 'tsx']}],
         '@typescript-eslint/no-unused-vars': [

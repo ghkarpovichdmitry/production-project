@@ -5,7 +5,7 @@ import { Loader } from './Loader';
 
 const meta: Meta = {
     component: Loader,
-    title: 'widgets/Loader',
+    title: 'shared/Loader',
     parameters: {
         layout: 'fullscreen'
     },

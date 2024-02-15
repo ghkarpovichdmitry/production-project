@@ -5,7 +5,7 @@ import { type ReactElement } from 'react';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { type Profile } from '../../model/types/profile';
-import { Loader } from 'widgets/Loader/ui/Loader';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { type Currency, CurrencySelect } from 'entities/Currency';
 import { type Country, CountrySelect } from 'entities/Country';

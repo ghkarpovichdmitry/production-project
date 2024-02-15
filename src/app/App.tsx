@@ -6,7 +6,7 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { type ReactElement, Suspense, useEffect } from 'react';
-import { Loader } from 'widgets/Loader/ui/Loader';
+import { Loader } from 'shared/ui/Loader/Loader';
 
 const App = (): ReactElement => {
     const { theme } = useTheme();

@@ -5,7 +5,7 @@ import ArticlesPage from './ArticlesPage';
 
 const meta: Meta = {
     component: ArticlesPage,
-    title: '/ArticlesPage',
+    title: 'pages/ArticlesPage',
     parameters: {
         layout: 'fullscreen'
     },
