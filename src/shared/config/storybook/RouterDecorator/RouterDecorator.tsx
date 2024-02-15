@@ -1,12 +1,26 @@
 import 'app/styles/index.scss';
-import { type StoryFn } from '@storybook/react';
-import { BrowserRouter } from 'react-router-dom';
 import { type ReactElement } from 'react';
+import { type StoryContext } from '@storybook/react';
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
 
-export const RouterDecorator = (StoryComponent: StoryFn): ReactElement => {
+export function RouterDecorator (StoryComponent: any, { parameters: { router } }: StoryContext): ReactElement {
+    if (!router) {
+        return (
+            <BrowserRouter>
+                <StoryComponent/>
+            </BrowserRouter>
+        );
+    }
+    const {
+        path,
+        route
+    } = router;
+    const r = encodeURI(route);
     return (
-        <BrowserRouter>
-            <StoryComponent/>
-        </BrowserRouter>
+        <MemoryRouter initialEntries={[r]}>
+            <Routes>
+                <Route path={path} element={<StoryComponent/>}/>
+            </Routes>
+        </MemoryRouter>
     );
-};
+}

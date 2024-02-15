@@ -9,7 +9,11 @@ const meta: Meta = {
     component: ArticleDetailsPage,
     title: 'pages/ArticleDetailsPage',
     parameters: {
-        layout: 'fullscreen'
+        layout: 'fullscreen',
+        router: {
+            path: '/articles/:id',
+            route: '/articles/1',
+        },
     },
     tags: ['autodocs']
 };
