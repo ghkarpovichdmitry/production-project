@@ -22,7 +22,7 @@ export const Empty: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const WithValue: Story = {
+export const WithValueLight: Story = {
     args: {
         type: 'text',
         value: 'Input value'
@@ -30,19 +30,34 @@ export const WithValue: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const EmptyOnDarkBackground: Story = {
+export const EmptyDark: Story = {
     args: {
         type: 'text'
     },
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const WithValueOnDarkBackground: Story = {
+export const EmptyViolet: Story = {
+    args: {
+        type: 'text'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};
+
+export const WithValueDark: Story = {
     args: {
         type: 'text',
         value: 'Input value'
     },
     decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const WithValueViolet: Story = {
+    args: {
+        type: 'text',
+        value: 'Input value'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
 };
 
 export const EmptyWithPlaceholder: Story = {
@@ -53,12 +68,20 @@ export const EmptyWithPlaceholder: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const EmptyWithPlaceholderOnDarkBackground: Story = {
+export const EmptyWithPlaceholderDark: Story = {
     args: {
         type: 'text',
         placeholder: 'Input placeholder'
     },
     decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const EmptyWithPlaceholderViolet: Story = {
+    args: {
+        type: 'text',
+        placeholder: 'Input placeholder'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
 };
 
 export const WithValueWithPlaceholder: Story = {
@@ -70,11 +93,20 @@ export const WithValueWithPlaceholder: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const WithValueWithPlaceholderOnDarkBackground: Story = {
+export const WithValueWithPlaceholderDark: Story = {
     args: {
         type: 'text',
         value: 'Input value',
         placeholder: 'Input placeholder'
     },
     decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const WithValueWithPlaceholderViolet: Story = {
+    args: {
+        type: 'text',
+        value: 'Input value',
+        placeholder: 'Input placeholder'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
 };

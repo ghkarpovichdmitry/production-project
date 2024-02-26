@@ -15,3 +15,6 @@ https://stackblitz.com/github/storybookjs/sandboxes/tree/next/react-webpack/17-t
 //
 //     return componentMap[block.type] || null;
 // }, []);
+
+// ?1 Looks like if the article wasn't found on BE we need to hide all info on the page,
+// do not show article details and comments too

@@ -53,3 +53,17 @@ export const DarkShort: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)]
 };
+
+export const Violet: Story = {
+    args: {
+        short: false
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};
+
+export const VioletShort: Story = {
+    args: {
+        short: true
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};

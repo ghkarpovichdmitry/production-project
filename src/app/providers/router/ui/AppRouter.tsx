@@ -9,25 +9,27 @@ import { useSelector } from 'react-redux';
 const AppRouter = (): ReactElement => {
     const isAuth = useSelector(getUserAuthData);
 
-    const renderWithRouter = useCallback((router: AppRoutesProps) => {
-        const element = (<Suspense fallback={<PageLoader/>}>
-            <div className="page-wrapper">
-                {router.element}
-            </div>
-        </Suspense>);
+    const renderWithWrapper = useCallback((route: AppRoutesProps) => {
+        const element = (
+            <Suspense fallback={<PageLoader/>}>
+                <div className="page-wrapper">
+                    {route.element}
+                </div>
+            </Suspense>
+        );
 
         return (
             <Route
-                key={router.path}
-                path={router.path}
-                element={router.authOnly && isAuth ? <RequireAuth>{element}</RequireAuth> : element}
+                key={route.path}
+                path={route.path}
+                element={route.authOnly && isAuth ? <RequireAuth>{element}</RequireAuth> : element}
             />
         ); // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // should render only once because of hidden routes
 
     return (
         <Routes>
-            {Object.values(routeConfig).map(renderWithRouter)}
+            {Object.values(routeConfig).map(renderWithWrapper)}
         </Routes>
     );
 };

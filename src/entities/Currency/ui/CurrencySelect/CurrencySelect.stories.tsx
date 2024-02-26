@@ -15,14 +15,14 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof CurrencySelect>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const PrimaryViolet: Story = {
+export const Violet: Story = {
     decorators: [ThemeDecorator(Theme.VIOLET)]
 };

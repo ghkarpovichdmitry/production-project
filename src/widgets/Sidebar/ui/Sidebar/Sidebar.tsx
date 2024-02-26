@@ -1,4 +1,4 @@
-import { type ReactElement, useState, memo, useMemo, useCallback } from 'react';
+import { type ReactElement, useState, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -14,18 +14,16 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps): ReactElement => {
     const [collapsed, setCollapsed] = useState(false);
-
-    const onToggle = useCallback((): void => {
+    const onToggle = (): void => {
         setCollapsed(prev => !prev);
-    }, [setCollapsed]);
-
-    const itemsList = useMemo(() => (SidebarItemsList.map((item) => (
+    };
+    const itemsList = (SidebarItemsList.map((item) => (
         <SidebarItem
             item={item}
             key={item.path}
             collapsed={collapsed}
         />
-    ))), [collapsed]);
+    )));
 
     return (
         <div

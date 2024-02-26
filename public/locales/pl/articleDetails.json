@@ -1,4 +1,8 @@
 {
   "Article was not found": "Artykuł nie został znaleziony",
-  "An error occurred while the page was loading": "Wystąpił błąd podczas ładowania strony"
+  "An error occurred while the page was loading": "Wystąpił błąd podczas ładowania strony",
+  "An error occurred while the article details were loading": "-",
+  "Comments": "Komentarze",
+  "No comments": "Brak komentarzy",
+  "Fetching comments error": "Błąd podczas pobierania komentarzy"
 }

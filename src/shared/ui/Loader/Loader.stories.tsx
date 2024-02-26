@@ -22,3 +22,7 @@ export const Normal: Story = {
 export const Dark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
+
+export const Violet: Story = {
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};

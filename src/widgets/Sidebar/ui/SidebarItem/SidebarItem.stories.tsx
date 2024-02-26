@@ -50,10 +50,26 @@ export const Dark: Story = {
     ]
 };
 
-export const LightCollapsed: Story = {
+export const Violet: Story = {
     args: {
         item: {
             text: 'Sidebar menu 3',
+            path: RoutePath.main,
+            Icon: MainIcon,
+            authOnly: false
+        },
+        collapsed: false,
+    },
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({})
+    ]
+};
+
+export const LightCollapsed: Story = {
+    args: {
+        item: {
+            text: 'Sidebar menu 4',
             path: RoutePath.main,
             Icon: MainIcon,
             authOnly: false
@@ -69,7 +85,7 @@ export const LightCollapsed: Story = {
 export const DarkCollapsed: Story = {
     args: {
         item: {
-            text: 'Sidebar menu 4',
+            text: 'Sidebar menu 5',
             path: RoutePath.main,
             Icon: MainIcon,
             authOnly: false
@@ -78,6 +94,22 @@ export const DarkCollapsed: Story = {
     },
     decorators: [
         ThemeDecorator(Theme.DARK),
+        StoreDecorator({})
+    ]
+};
+
+export const VioletCollapsed: Story = {
+    args: {
+        item: {
+            text: 'Sidebar menu 6',
+            path: RoutePath.main,
+            Icon: MainIcon,
+            authOnly: false
+        },
+        collapsed: true,
+    },
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
         StoreDecorator({})
     ]
 };

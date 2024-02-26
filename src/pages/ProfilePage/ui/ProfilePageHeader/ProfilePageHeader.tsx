@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ProfilePageHeader.module.scss';
 import { useTranslation } from 'react-i18next';
-import { type ReactElement, useCallback } from 'react';
+import { memo, type ReactElement, useCallback } from 'react';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
@@ -12,7 +12,7 @@ interface ProfilePageHeaderProps {
     className?: string
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps): ReactElement => {
+export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps): ReactElement => {
     const { t } = useTranslation();
     const readonly = useSelector(getProfileReadonly);
     const dispatch = useAppDispatch();
@@ -49,4 +49,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps): ReactE
             }
         </div>
     );
-};
+});
+
+ProfilePageHeader.displayName = 'ProfilePageHeader';

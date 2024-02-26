@@ -15,7 +15,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {
         label: 'Please select',
         options: [
@@ -27,7 +27,7 @@ export const PrimaryLight: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     args: {
         label: 'Please select',
         options: [
@@ -37,4 +37,16 @@ export const PrimaryDark: Story = {
         ]
     },
     decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const Violet: Story = {
+    args: {
+        label: 'Please select',
+        options: [
+            { value: '1', content: 'First element' },
+            { value: '2', content: 'Second element' },
+            { value: '3', content: 'Third element' },
+        ]
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
 };

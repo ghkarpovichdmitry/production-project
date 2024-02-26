@@ -30,15 +30,17 @@ export const Navbar = memo(({ className }: NavBarProps): ReactElement => {
     }, [dispatch]);
 
     if (authData) {
-        return (<div className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                className={cls.links}
-                onClick={onLogout}
-            >
-                {t('Logout')}
-            </Button>
-        </div>);
+        return (
+            <div className={classNames(cls.Navbar, {}, [className])}>
+                <Button
+                    theme={ButtonTheme.CLEAR_INVERTED}
+                    className={cls.links}
+                    onClick={onLogout}
+                >
+                    {t('Logout')}
+                </Button>
+            </div>
+        );
     }
 
     return (

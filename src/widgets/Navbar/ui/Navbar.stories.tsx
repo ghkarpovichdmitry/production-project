@@ -33,3 +33,12 @@ export const Dark: Story = {
         })
     ]
 };
+
+export const Violet: Story = {
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({
+            user: {}
+        })
+    ]
+};

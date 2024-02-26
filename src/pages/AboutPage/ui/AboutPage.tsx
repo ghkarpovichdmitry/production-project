@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { type ReactElement, memo } from 'react';
+import { type ReactElement } from 'react';
 
-const AboutPage = memo((): ReactElement => {
+const AboutPage = (): ReactElement => {
     const { t } = useTranslation('aboutUsPage');
 
     return (
@@ -11,7 +11,7 @@ const AboutPage = memo((): ReactElement => {
             <h2>{t('Test translation')}</h2>
         </div>
     );
-});
+};
 
 AboutPage.displayName = 'AboutPage';
 

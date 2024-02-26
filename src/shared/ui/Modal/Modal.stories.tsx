@@ -36,3 +36,12 @@ export const ModalDark: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)]
 };
+
+export const ModalViolet: Story = {
+    args: {
+        isOpen: false,
+        children: <div>Text example</div>,
+        lazy: false
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};

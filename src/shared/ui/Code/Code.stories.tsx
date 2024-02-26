@@ -15,7 +15,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof Code>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {
         text: 'const meta: Meta = {\n' +
             '    component: Code,\n' +
@@ -29,7 +29,7 @@ export const PrimaryLight: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     args: {
         text: 'const meta: Meta = {\n' +
             '    component: Code,\n' +
@@ -43,7 +43,7 @@ export const PrimaryDark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const PrimaryViolet: Story = {
+export const Violet: Story = {
     args: {
         text: 'const meta: Meta = {\n' +
             '    component: Code,\n' +

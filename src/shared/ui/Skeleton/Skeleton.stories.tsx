@@ -15,7 +15,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof Skeleton>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {
         width: '100%',
         height: 200
@@ -23,7 +23,7 @@ export const PrimaryLight: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     args: {
         width: '100%',
         height: 200
@@ -31,7 +31,7 @@ export const PrimaryDark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const PrimaryViolet: Story = {
+export const Violet: Story = {
     args: {
         width: '100%',
         height: 200

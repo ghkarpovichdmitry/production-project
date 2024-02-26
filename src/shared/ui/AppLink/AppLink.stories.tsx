@@ -18,7 +18,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof AppLink>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {
         theme: AppLinkTheme.PRIMARY,
         children: 'Primary link'
@@ -26,7 +26,7 @@ export const PrimaryLight: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     args: {
         theme: AppLinkTheme.PRIMARY,
         children: 'Primary link'
@@ -34,7 +34,15 @@ export const PrimaryDark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const SecondaryLight: Story = {
+export const Violet: Story = {
+    args: {
+        theme: AppLinkTheme.PRIMARY,
+        children: 'Primary link'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};
+
+export const InvertedLight: Story = {
     args: {
         theme: AppLinkTheme.INVERTED,
         children: 'Secondary link'
@@ -42,10 +50,18 @@ export const SecondaryLight: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const SecondaryDark: Story = {
+export const InvertedDark: Story = {
     args: {
         theme: AppLinkTheme.INVERTED,
         children: 'Secondary link'
     },
     decorators: [ThemeDecorator(Theme.DARK)]
+};
+
+export const InvertedViolet: Story = {
+    args: {
+        theme: AppLinkTheme.INVERTED,
+        children: 'Secondary link'
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
 };

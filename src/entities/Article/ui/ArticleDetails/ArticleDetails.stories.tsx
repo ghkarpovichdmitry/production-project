@@ -87,7 +87,7 @@ const article = {
     ]
 };
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.LIGHT),
@@ -100,7 +100,7 @@ export const PrimaryLight: Story = {
     ]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.DARK),
@@ -113,7 +113,7 @@ export const PrimaryDark: Story = {
     ]
 };
 
-export const PrimaryViolet: Story = {
+export const Violet: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.VIOLET),

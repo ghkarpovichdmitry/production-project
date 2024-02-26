@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleDetails.module.scss';
 import { useTranslation } from 'react-i18next';
-import { memo, type ReactElement, useCallback, useEffect } from 'react';
+import { memo, type ReactElement, useCallback } from 'react';
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import {
@@ -25,6 +25,7 @@ import {
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 
 interface ArticleDetailsProps {
     className?: string
@@ -61,11 +62,7 @@ export const ArticleDetails = memo(({
     }, []);
     /* eslint-enable indent */
 
-    useEffect(() => {
-        if (_PROJECT_ !== 'storybook') {
-            dispatch(fetchArticleById(id));
-        }
-    }, [dispatch, id]);
+    useInitialEffect(() => dispatch(fetchArticleById(id)), [dispatch, id]);
 
     if (isLoading) {
         content = (
@@ -83,7 +80,8 @@ export const ArticleDetails = memo(({
                 <Text
                     align={TextAlign.CENTER}
                     theme={TextTheme.ERROR}
-                    title={t('An error occurred while the page was loading')}
+                    title={t('An error occurred while the article details were loading')}
+                    text={error.toString()}
                 />
             );
         } else {

@@ -43,6 +43,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps): ReactElement 
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUserName({ username, password }));
 
+        // useAppDispatch is for typing result
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
         }

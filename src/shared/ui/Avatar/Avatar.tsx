@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import { type CSSProperties, type ReactElement, useMemo } from 'react';
+// import user from '../../assets/img/user.jpg';
 
 interface AvatarProps {
     className?: string
@@ -22,6 +23,7 @@ export const Avatar = ({
 
     return (
         <img
+            // src={src || user}
             src={src}
             alt={alt}
             style={styles}

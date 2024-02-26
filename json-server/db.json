@@ -95,13 +95,13 @@
       "id": "2",
       "text": "some comment 2",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "3",
       "text": "some comment 3",
       "articleId": "1",
-      "userId": "1"
+      "userId": "3"
     }
   ],
   "users": [
@@ -109,11 +109,19 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.freepik.com/free-photo/senior-man-white-sweater-eyeglasses_273609-42003.jpg?size=626&ext=jpg"
     },
     {
       "id": "2",
       "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://t3.ftcdn.net/jpg/03/02/88/46/240_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg"
+    },
+    {
+      "id": "3",
+      "username": "user 2",
       "password": "123",
       "role": "USER"
     }

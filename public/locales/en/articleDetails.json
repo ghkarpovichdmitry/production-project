@@ -1,4 +1,8 @@
 {
   "Article was not found": "Article was not found",
-  "An error occurred while the page was loading": "An error occurred while the page was loading"
+  "An error occurred while the page was loading": "An error occurred while the page was loading",
+  "An error occurred while the article details were loading": "An error occurred while the article details were loading",
+  "Comments": "Comments",
+  "No comments": "No comments",
+  "Fetching comments error": "Error happen while fetching comments"
 }

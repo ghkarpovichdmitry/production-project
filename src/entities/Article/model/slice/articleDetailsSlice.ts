@@ -10,7 +10,7 @@ const initialState: ArticleDetailsSchema = {
 };
 
 export const articleDetailsSlice = createSlice({
-    name: 'ArticleDetails',
+    name: 'articleDetailsSlice',
     initialState,
     reducers: {
         setReadOnly: (state: ArticleDetailsSchema, action: PayloadAction<boolean>) => {

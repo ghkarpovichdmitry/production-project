@@ -35,7 +35,7 @@ export const ErrorText: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryTextDark: Story = {
+export const TextDark: Story = {
     args: {
         text: 'Text example',
         theme: TextTheme.PRIMARY
@@ -51,7 +51,23 @@ export const ErrorTextDark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)]
 };
 
-export const PrimaryTextWithTitle: Story = {
+export const TextViolet: Story = {
+    args: {
+        text: 'Text example',
+        theme: TextTheme.PRIMARY
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};
+
+export const ErrorTextViolet: Story = {
+    args: {
+        text: 'Text example',
+        theme: TextTheme.ERROR
+    },
+    decorators: [ThemeDecorator(Theme.VIOLET)]
+};
+
+export const TextWithTitle: Story = {
     args: {
         title: 'Title example',
         text: 'Text example',
@@ -60,7 +76,7 @@ export const PrimaryTextWithTitle: Story = {
     decorators: [ThemeDecorator(Theme.LIGHT)]
 };
 
-export const PrimaryTextWithTitleDark: Story = {
+export const TextWithTitleDark: Story = {
     args: {
         title: 'Title example',
         text: 'Text example',

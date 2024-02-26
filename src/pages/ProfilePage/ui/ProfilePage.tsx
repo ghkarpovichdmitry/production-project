@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ProfilePage.module.scss';
-import { memo, type ReactElement, useCallback, useEffect } from 'react';
+import { memo, type ReactElement, useCallback } from 'react';
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
@@ -21,6 +21,7 @@ import { type Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 
 interface ProfilePageProps {
     className?: string
@@ -47,11 +48,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps): ReactElement => {
         [ValidateProfileError.SERVER_ERROR]: t('Incorrect server error')
     };
 
-    useEffect(() => {
-        if (_PROJECT_ !== 'storybook') {
-            dispatch(fetchProfileData());
-        }
-    }, [dispatch]);
+    useInitialEffect(() => dispatch(fetchProfileData()), [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ firstname: value || '' }));

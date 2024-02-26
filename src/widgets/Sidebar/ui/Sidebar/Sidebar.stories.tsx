@@ -44,6 +44,20 @@ export const Dark: Story = {
     ]
 };
 
+export const Violet: Story = {
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({
+            user: {
+                authData: {
+                    id: '1',
+                    username: 'admin'
+                }
+            }
+        })
+    ]
+};
+
 export const NoAuth: Story = {
     decorators: [
         ThemeDecorator(Theme.LIGHT),

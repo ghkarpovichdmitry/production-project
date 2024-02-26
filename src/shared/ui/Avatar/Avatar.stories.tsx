@@ -16,20 +16,11 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof Avatar>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
     args: {
         alt: 'Avatar',
         size: 150,
         src: AvatarImg
     },
     decorators: [ThemeDecorator(Theme.LIGHT)]
-};
-
-export const PrimaryDark: Story = {
-    args: {
-        alt: 'Avatar',
-        size: 150,
-        src: AvatarImg
-    },
-    decorators: [ThemeDecorator(Theme.DARK)]
 };
