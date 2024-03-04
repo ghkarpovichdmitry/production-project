@@ -9,6 +9,7 @@ import { type AxiosInstance } from 'axios';
 import { type To } from '@remix-run/router';
 import { type NavigateOptions } from 'react-router/dist/lib/context';
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { type AddCommentFormSchema } from 'features/AddCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema
@@ -19,6 +20,7 @@ export interface StateSchema {
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentsSchema
+    addCommentForm?: AddCommentFormSchema
 }
 
 export interface ReducerManager {

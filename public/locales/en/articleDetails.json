@@ -4,5 +4,7 @@
   "An error occurred while the article details were loading": "An error occurred while the article details were loading",
   "Comments": "Comments",
   "No comments": "No comments",
-  "Fetching comments error": "Error happen while fetching comments"
+  "Fetching comments error": "Error happen while fetching comments",
+  "Add comment text": "Add comment text",
+  "Send": "Send"
 }

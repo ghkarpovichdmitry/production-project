@@ -126,14 +126,39 @@
       "role": "USER"
     }
   ],
-  "profile": {
-    "firstname": "Dzmitry",
-    "lastname": "Karpovich",
-    "age": 33,
-    "currency": "ZL",
-    "country": "Poland",
-    "city": "Gdansk",
-    "username": "admin",
-    "avatar": "https://images.unsplash.com/photo-1706779847951-6dd0ac82cf01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Dzmitry",
+      "lastname": "Karpovich",
+      "age": 33,
+      "currency": "USD",
+      "country": "Poland",
+      "city": "Gdansk",
+      "username": "DziKjjj",
+      "avatar": "https://images.unsplash.com/photo-1706779847951-6dd0ac82cf01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D"
+    },
+    {
+      "id": "2",
+      "firstname": "Alex",
+      "lastname": "Sash",
+      "age": 35,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "ASa",
+      "avatar": "https://images.unsplash.com/photo-1706779847951-6dd0ac82cf01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D"
+    },
+    {
+      "id": "3",
+      "firstname": "Hanna",
+      "lastname": "Supergirl",
+      "age": 40,
+      "currency": "USD",
+      "country": "USA",
+      "city": "NY",
+      "username": "superG",
+      "avatar": "https://images.unsplash.com/photo-1706779847951-6dd0ac82cf01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D"
+    }
+  ]
 }

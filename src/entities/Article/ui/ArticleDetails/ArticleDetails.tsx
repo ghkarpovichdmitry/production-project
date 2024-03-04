@@ -107,14 +107,14 @@ export const ArticleDetails = memo(({
                             text={article?.createdAt}
                         />
                     </div>
-                    {article?.blocks.map(renderBlock)}
+                    {article?.blocks?.map(renderBlock)}
                 </>
             );
         }
     }
 
     return (
-        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount={true}>
+        <DynamicModuleLoader reducers={initialReducers}>
             <div className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
             </div>

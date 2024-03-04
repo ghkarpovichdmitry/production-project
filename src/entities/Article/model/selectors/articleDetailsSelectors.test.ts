@@ -1,6 +1,6 @@
 import { type StateSchema } from 'app/providers/StoreProvider';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/Article';
-import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from 'entities/Article';
+import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from './articleDetailsSelectors';
 
 describe('Article details selectors tests', function () {
     test('getArticleDetailsData returns state', () => {

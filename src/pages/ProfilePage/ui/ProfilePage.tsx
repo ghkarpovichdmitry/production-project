@@ -22,6 +22,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile';
 import { useTranslation } from 'react-i18next';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 
 interface ProfilePageProps {
     className?: string
@@ -39,6 +40,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps): ReactElement => {
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
     const { t } = useTranslation('profilePage');
+    const { id } = useParams<{ id: string }>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.NO_DATA]: t('No data'),
@@ -48,7 +50,11 @@ const ProfilePage = memo(({ className }: ProfilePageProps): ReactElement => {
         [ValidateProfileError.SERVER_ERROR]: t('Incorrect server error')
     };
 
-    useInitialEffect(() => dispatch(fetchProfileData()), [dispatch]);
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
+        }
+    }, [dispatch, id]);
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ firstname: value || '' }));
@@ -83,7 +89,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps): ReactElement => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount={true}>
+        <DynamicModuleLoader reducers={initialReducers}>
             <div className={classNames(cls.ProfilePage, {}, [className])}>
                 <ProfilePageHeader/>
                 {validateErrors?.length && validateErrors?.map(err => (

@@ -4,5 +4,7 @@
   "An error occurred while the article details were loading": "-",
   "Comments": "Komentarze",
   "No comments": "Brak komentarzy",
-  "Fetching comments error": "Błąd podczas pobierania komentarzy"
+  "Fetching comments error": "Błąd podczas pobierania komentarzy",
+  "Add comment text": "Dodaj tekst komentarza",
+  "Send": "Wysłać"
 }

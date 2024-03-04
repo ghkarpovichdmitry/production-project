@@ -12,7 +12,8 @@ const profileData = {
     country: Country.Poland,
     city: 'Gdansk',
     username: 'Admin',
-    avatar: ''
+    avatar: '',
+    id: '1'
 };
 
 describe('updateProfileData test', function () {

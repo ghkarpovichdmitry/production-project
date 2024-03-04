@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { type ReactElement } from 'react';
+import { type ReactElement, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
 import { CommentList } from 'entities/Comment';
@@ -11,12 +11,15 @@ import {
     articleDetailsCommentsReducer,
     getArticleDetailsComments
 } from '../../model/slices/articleDetailsCommentsSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getArticleCommentsError, getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import {
     fetchCommentsByArticleId
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/AddCommentForm';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -29,12 +32,16 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElement => {
     const { t } = useTranslation('articleDetails');
     const { id } = useParams();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const comments = useSelector(getArticleDetailsComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const error = useSelector(getArticleCommentsError);
 
     useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)), [id]);
+
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
 
     if (!id) {
         return (
@@ -42,6 +49,14 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
                 <h1>{t('Article was not found')}</h1>
             </div>
         );
+    }
+
+    if (error) {
+        return <Text
+            className={cls.commentsTitle}
+            theme={TextTheme.ERROR}
+            title={t('Fetching comments error')}
+        />;
     }
 
     return (
@@ -52,10 +67,11 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
                     className={cls.commentsTitle}
                     title={t('Comments')}
                 />
-                {error
-                    ? <Text className={cls.commentsTitle} theme={TextTheme.ERROR} title={t('Fetching comments error')}/>
-                    : null
-                }
+                <AddCommentForm onSendComment={onSendComment} isLoading={commentsIsLoading}/>
+                {/* {error */}
+                {/*     ? <Text className={cls.commentsTitle} theme={TextTheme.ERROR} title={t('Fetching comments error')}/> */}
+                {/*     : null */}
+                {/* } */}
                 <CommentList
                     className={cls.comments}
                     isLoading={commentsIsLoading}

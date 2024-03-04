@@ -24,7 +24,10 @@ const initialReducers: ReducersList = {
     loginForm: loginReducer
 };
 
-const LoginForm = memo(({ className, onSuccess }: LoginFormProps): ReactElement => {
+const LoginForm = memo(({
+    className,
+    onSuccess
+}: LoginFormProps): ReactElement => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const username = useSelector(getLoginUserName);
@@ -41,7 +44,10 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps): ReactElement 
     }, [dispatch]);
 
     const onLoginClick = useCallback(async () => {
-        const result = await dispatch(loginByUserName({ username, password }));
+        const result = await dispatch(loginByUserName({
+            username,
+            password
+        }));
 
         // useAppDispatch is for typing result
         if (result.meta.requestStatus === 'fulfilled') {
@@ -50,11 +56,8 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps): ReactElement 
     }, [onSuccess, dispatch, username, password]);
 
     return (
-        <DynamicModuleLoader
-            reducers={initialReducers}
-            removeAfterUnmount={true}
-        >
-            <div className={classNames(cls.LoginForm, {}, [className])}>
+        <DynamicModuleLoader reducers={initialReducers}>
+            <form className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Authorisation form')}/>
 
                 {error && (
@@ -86,7 +89,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps): ReactElement 
                 >
                     {t('Login')}
                 </Button>
-            </div>
+            </form>
         </DynamicModuleLoader>
     );
 });

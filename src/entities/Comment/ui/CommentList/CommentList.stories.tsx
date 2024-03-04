@@ -6,19 +6,18 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 
 const meta: Meta = {
     component: CommentList,
-    title: 'entities/Comments/CommentList',
+    title: 'entities/Comment/CommentList',
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
 };
 
-const testEntities = {
-    1: {
+const testComments = [
+    {
         id: '1',
         text: 'some comment',
         articleId: '1',
-        userId: '1',
         user: {
             id: '1',
             username: 'admin',
@@ -27,11 +26,10 @@ const testEntities = {
             avatar: 'https://img.freepik.com/free-photo/senior-man-white-sweater-eyeglasses_273609-42003.jpg?size=626&ext=jpg'
         }
     },
-    2: {
+    {
         id: '2',
         text: 'some comment 2',
         articleId: '1',
-        userId: '2',
         user: {
             id: '2',
             username: 'user',
@@ -40,11 +38,10 @@ const testEntities = {
             avatar: 'https://t3.ftcdn.net/jpg/03/02/88/46/240_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg'
         }
     },
-    3: {
+    {
         id: '3',
         text: 'some comment 3',
         articleId: '1',
-        userId: '3',
         user: {
             id: '3',
             username: 'user 2',
@@ -52,31 +49,73 @@ const testEntities = {
             role: 'USER'
         }
     }
-};
+];
 
 export default meta;
 type Story = StoryObj<typeof CommentList>;
 
 export const Light: Story = {
-    args: {},
+    args: {
+        comments: testComments,
+        isLoading: false
+    },
     decorators: [
         ThemeDecorator(Theme.LIGHT),
-        StoreDecorator({
-            articleDetailsComments: {
-                isLoading: false,
-                ids: ['1', '2'],
-                entities: testEntities,
-            }
-        })
+        StoreDecorator({})
     ]
 };
 
 export const Dark: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.DARK)]
+    args: {
+        comments: testComments,
+        isLoading: false
+    },
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({})
+    ]
 };
 
 export const Violet: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.VIOLET)]
+    args: {
+        comments: testComments,
+        isLoading: false
+    },
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({})
+    ]
+};
+
+export const LightLoading: Story = {
+    args: {
+        comments: undefined,
+        isLoading: true
+    },
+    decorators: [
+        ThemeDecorator(Theme.LIGHT),
+        StoreDecorator({})
+    ]
+};
+
+export const DarkLoading: Story = {
+    args: {
+        comments: undefined,
+        isLoading: true
+    },
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({})
+    ]
+};
+
+export const VioletLoading: Story = {
+    args: {
+        comments: undefined,
+        isLoading: true
+    },
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({})
+    ]
 };

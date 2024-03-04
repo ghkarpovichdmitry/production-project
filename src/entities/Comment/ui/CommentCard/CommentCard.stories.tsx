@@ -6,7 +6,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 
 const meta: Meta = {
     component: CommentCard,
-    title: 'entities/Comments/CommentCard',
+    title: 'entities/Comment/CommentCard',
     parameters: {
         layout: 'fullscreen'
     },
@@ -16,25 +16,64 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof CommentCard>;
 
-export const LightLoading: Story = {
-    args: {},
+export const Light: Story = {
+    args: {
+        comment: {
+            id: '1',
+            text: 'some comment',
+            user: {
+                id: '2',
+                username: 'Alex'
+            }
+        }
+    },
     decorators: [
         ThemeDecorator(Theme.LIGHT),
-        StoreDecorator({
-            articleDetailsComments: {
-                isLoading: true,
-                error: undefined,
-            }
-        })
+        StoreDecorator({})
     ]
 };
 
-// export const Dark: Story = {
-//     args: {},
-//     decorators: [ThemeDecorator(Theme.DARK)]
-// };
-//
-// export const Violet: Story = {
-//     args: {},
-//     decorators: [ThemeDecorator(Theme.VIOLET)]
-// };
+export const Dark: Story = {
+    args: {
+        comment: {
+            id: '1',
+            text: 'some comment',
+            user: {
+                id: '2',
+                username: 'Alex'
+            }
+        }
+    },
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({})
+    ]
+};
+
+export const Violet: Story = {
+    args: {
+        comment: {
+            id: '1',
+            text: 'some comment',
+            user: {
+                id: '2',
+                username: 'Alex'
+            }
+        }
+    },
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({})
+    ]
+};
+
+export const LightLoading: Story = {
+    args: {
+        comment: undefined,
+        isLoading: true
+    },
+    decorators: [
+        ThemeDecorator(Theme.LIGHT),
+        StoreDecorator({})
+    ]
+};

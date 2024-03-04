@@ -23,7 +23,11 @@ export const articleDetailsCommentsSlice = createSlice({
         ids: [],
         entities: {}
     }),
-    reducers: {},
+    reducers: {
+        addComment: (state: ArticleDetailsCommentsSchema, action: PayloadAction<Comment>) => {
+            articleDetailsCommentsAdapter.setOne(state, action.payload); // addComment may be removed
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchCommentsByArticleId.pending, (state: ArticleDetailsCommentsSchema) => {
