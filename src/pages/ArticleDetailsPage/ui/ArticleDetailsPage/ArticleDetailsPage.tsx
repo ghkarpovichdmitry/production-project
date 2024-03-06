@@ -13,13 +13,14 @@ import {
 } from '../../model/slices/articleDetailsCommentsSlice';
 import { useSelector } from 'react-redux';
 import { getArticleCommentsError, getArticleCommentsIsLoading } from '../../model/selectors/comments';
-import {
-    fetchCommentsByArticleId
-} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { useNavigate } from 'react-router';
+import { RoutePath } from 'shared/config/routeConfig/routerConfig';
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -36,6 +37,11 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
     const comments = useSelector(getArticleDetailsComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const error = useSelector(getArticleCommentsError);
+    const navigate = useNavigate();
+
+    const onBackToList = useCallback(() => {
+        navigate(RoutePath.articles);
+    }, [navigate]);
 
     useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)), [id]);
 
@@ -62,16 +68,18 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
     return (
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames('', {}, [className])}>
+                <Button
+                    onClick={onBackToList}
+                    theme={ButtonTheme.OUTLINE}
+                >
+                    {t('Back to the list')}
+                </Button>
                 <ArticleDetails id={id}/>
                 <Text
                     className={cls.commentsTitle}
                     title={t('Comments')}
                 />
                 <AddCommentForm onSendComment={onSendComment} isLoading={commentsIsLoading}/>
-                {/* {error */}
-                {/*     ? <Text className={cls.commentsTitle} theme={TextTheme.ERROR} title={t('Fetching comments error')}/> */}
-                {/*     : null */}
-                {/* } */}
                 <CommentList
                     className={cls.comments}
                     isLoading={commentsIsLoading}

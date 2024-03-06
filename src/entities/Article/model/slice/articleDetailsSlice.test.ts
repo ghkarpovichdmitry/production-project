@@ -8,6 +8,10 @@ const article = {
     subtitle: 'Article details subtitle',
     img: 'http://fake-image-url',
     views: 10,
+    user: {
+        id: '1',
+        username: 'Alex'
+    },
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
     blocks: [{
