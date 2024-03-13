@@ -1,13 +1,13 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Card.module.scss';
-import { type ReactElement, memo, type ReactNode, type HTMLAttributes } from 'react';
+import { type ReactElement, type ReactNode, type HTMLAttributes } from 'react';
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string
     children: ReactNode
 }
 
-export const Card = memo(({
+export const Card = ({
     className,
     children,
     ...otherProps
@@ -20,6 +20,4 @@ export const Card = memo(({
             {children}
         </div>
     );
-});
-
-Card.displayName = 'Card';
+};

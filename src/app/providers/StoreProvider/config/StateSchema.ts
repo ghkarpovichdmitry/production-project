@@ -3,13 +3,14 @@ import { type UserSchema } from 'entities/User';
 import { type LoginSchema } from 'features/AuthByUserName';
 import { type ProfileSchema } from 'entities/Profile';
 import { type ArticleDetailsSchema } from 'entities/Article';
+import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { type AddCommentFormSchema } from 'features/AddCommentForm';
+import { type ArticlesPageSchema } from 'pages/ArticlesPage';
 import { type EnhancedStore, type ReducersMapObject } from '@reduxjs/toolkit';
 import { type AnyAction, type CombinedState, type Reducer } from 'redux';
 import { type AxiosInstance } from 'axios';
 import { type To } from '@remix-run/router';
 import { type NavigateOptions } from 'react-router/dist/lib/context';
-import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
-import { type AddCommentFormSchema } from 'features/AddCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema
@@ -21,6 +22,7 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentsSchema
     addCommentForm?: AddCommentFormSchema
+    articlesPage?: ArticlesPageSchema
 }
 
 export interface ReducerManager {

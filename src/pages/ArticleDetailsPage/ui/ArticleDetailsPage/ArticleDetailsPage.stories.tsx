@@ -166,10 +166,12 @@ export const LoadingArticlesCommentsLight: Story = {
         StoreDecorator({
             articleDetails: {
                 isLoading: false,
+                error: undefined,
                 data: article
             },
             articleDetailsComments: {
                 isLoading: true,
+                error: undefined
             }
         })
     ]
