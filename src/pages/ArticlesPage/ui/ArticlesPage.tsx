@@ -37,7 +37,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps): ReactElement => {
 
     useInitialEffect(() => {
         console.log('fetchArticlesList called because dispatch called');
-        dispatch(fetchArticlesList()); // todo if login need to be hard refreshed => potential bug
+        dispatch(fetchArticlesList('')); // todo if login need to be hard refreshed => potential bug
     }, [dispatch]);
 
     const onChangeView = useCallback((viewType: ArticleView) => {
