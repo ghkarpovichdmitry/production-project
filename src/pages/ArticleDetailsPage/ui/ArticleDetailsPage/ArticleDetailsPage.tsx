@@ -21,6 +21,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router';
 import { RoutePath } from 'shared/config/routeConfig/routerConfig';
+import { Page } from 'shared/ui/Page/Page';
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -67,7 +68,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <Button
                     onClick={onBackToList}
                     theme={ButtonTheme.OUTLINE}
@@ -85,7 +86,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps): ReactElemen
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

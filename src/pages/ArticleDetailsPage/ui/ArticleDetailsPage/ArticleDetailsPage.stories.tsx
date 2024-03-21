@@ -165,13 +165,55 @@ export const LoadingArticlesCommentsLight: Story = {
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
             articleDetails: {
-                isLoading: false,
+                isLoading: true,
                 error: undefined,
                 data: article
             },
             articleDetailsComments: {
                 isLoading: true,
-                error: undefined
+                error: undefined,
+                ids: [],
+                entities: {}
+            }
+        })
+    ]
+};
+
+export const LoadingArticlesCommentsDark: Story = {
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+                error: undefined,
+                data: article
+            },
+            articleDetailsComments: {
+                isLoading: true,
+                error: undefined,
+                ids: [],
+                entities: {}
+            }
+        })
+    ]
+};
+
+export const LoadingArticlesCommentsViolet: Story = {
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.VIOLET),
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+                error: undefined,
+                data: article
+            },
+            articleDetailsComments: {
+                isLoading: true,
+                error: undefined,
+                ids: [],
+                entities: {}
             }
         })
     ]

@@ -34,16 +34,18 @@ export const ArticleViewChanger = memo(({
     return (
         <div className={classNames('', {}, [className])}>
             {viewTypes.map(viewType => {
-                return (<Button
-                    theme={ButtonTheme.CLEAR}
-                    key={viewType.view}
-                    onClick={onClick(viewType.view)}
-                >
-                    <Icon
-                        Svg={viewType.icon}
-                        className={classNames('', { [cls.active]: view === viewType.view }, [className])}
-                    />
-                </Button>);
+                return (
+                    <Button
+                        key={viewType.view}
+                        theme={ButtonTheme.CLEAR}
+                        onClick={onClick(viewType.view)}
+                    >
+                        <Icon
+                            Svg={viewType.icon}
+                            className={classNames('', { [cls.active]: view === viewType.view }, [className])}
+                        />
+                    </Button>
+                );
             })}
         </div>
     );

@@ -227,6 +227,271 @@
           ]
         }
       ]
+    },
+    {
+      "id": "4",
+      "title": "Java news 4",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Java news 5",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Java news 6",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Java news 7",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Java news 8",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Java news 9",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Java news 10",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Java news 11",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Java news 12",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Java news 13",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Java news 14",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Java news 15",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },{
+      "id": "16",
+      "title": "Java news 16",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Java news 17",
+      "subtitle": "Что нового в JS за 2024 год?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 1022,
+      "userId": "3",
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
     }
   ],
   "comments": [

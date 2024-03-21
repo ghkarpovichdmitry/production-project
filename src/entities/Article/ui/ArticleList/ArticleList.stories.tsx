@@ -98,6 +98,7 @@ export const PrimaryVioletBIG: Story = {
 export const LoadingSmall: Story = {
     args: {
         isLoading: true,
+        articles: [],
         view: ArticleView.SMALL
     },
     decorators: [ThemeDecorator(Theme.LIGHT)]
@@ -106,6 +107,7 @@ export const LoadingSmall: Story = {
 export const LoadingBig: Story = {
     args: {
         isLoading: true,
+        articles: [],
         view: ArticleView.BIG
     },
     decorators: [ThemeDecorator(Theme.LIGHT)]

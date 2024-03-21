@@ -9,12 +9,10 @@ import { useSelector } from 'react-redux';
 const AppRouter = (): ReactElement => {
     const isAuth = useSelector(getUserAuthData);
 
-    const renderWithWrapper = useCallback((route: AppRoutesProps) => {
+    const renderWithSuspense = useCallback((route: AppRoutesProps) => {
         const element = (
             <Suspense fallback={<PageLoader/>}>
-                <div className="page-wrapper">
-                    {route.element}
-                </div>
+                {route.element}
             </Suspense>
         );
 
@@ -29,7 +27,7 @@ const AppRouter = (): ReactElement => {
 
     return (
         <Routes>
-            {Object.values(routeConfig).map(renderWithWrapper)}
+            {Object.values(routeConfig).map(renderWithSuspense)}
         </Routes>
     );
 };

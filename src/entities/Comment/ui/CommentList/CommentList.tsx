@@ -29,21 +29,21 @@ export const CommentList = ({
         );
     }
 
+    if (!comments?.length) {
+        return <Text text={t('No comments')}/>;
+    }
+
     return (
         <div className={classNames(cls.CommentList, {}, [className])}>
             {
-                comments?.length
-                    ? (comments.map(comment => (
-                        <CommentCard
-                            key={comment.id}
-                            isLoading={isLoading}
-                            className={cls.comment}
-                            comment={comment}
-                        />
-                    )))
-                    : (
-                        <Text text={t('No comments')}/>
-                    )
+                comments.map(comment => (
+                    <CommentCard
+                        key={comment.id}
+                        isLoading={isLoading}
+                        className={cls.comment}
+                        comment={comment}
+                    />
+                ))
             }
         </div>
     );

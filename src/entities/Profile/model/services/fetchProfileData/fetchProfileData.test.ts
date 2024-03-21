@@ -19,7 +19,7 @@ describe('fetchProfileData test', function () {
 
         thunk.api.get.mockReturnValue(Promise.resolve({ data: profileData }));
 
-        const result = await thunk.callThunk('1'); // todo id
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
@@ -31,7 +31,7 @@ describe('fetchProfileData test', function () {
         const thunk = new TestAsyncThunk(fetchProfileData);
 
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 400 }));
-        const result = await thunk.callThunk('1'); // todo id
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
